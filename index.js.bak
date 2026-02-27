@@ -1,0 +1,26 @@
+// index.js (fragmento relevante)
+const express = require("express");
+const cors = require("cors");
+const { port, apiToken } = require("./config/env");
+const mesonRoutes = require('./routes/meson.routes');
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Auth por token (si API_TOKEN está definido)
+app.use((req, res, next) => {
+  const token = req.headers["x-api-token"];
+  if (!apiToken) return next();
+  if (token !== apiToken) {
+    return res.status(401).json({ message: "Unauthorized" });
+  }
+  next();
+});
+
+// Monta rutas del mesón (incluye /api/meson/excel/* y /api/meson/*)
+app.use(mesonRoutes);
+
+app.listen(port, () => {
+  console.log(`Backend POS escuchando en puerto ${port}`);
+});

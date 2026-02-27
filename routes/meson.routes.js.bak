@@ -1,0 +1,66 @@
+// routes/meson.routes.js
+const express = require('express');
+const router = express.Router();
+
+const { loadPosdpofe } = require('../services/pos-dbf.service');
+
+let cachePOSDPOFE = null;
+
+async function ensureDpoCache() {
+  if (!cachePOSDPOFE) {
+    console.log('[MESON] Cargando POSDPOFE desde:', process.env.POSDPOFE_PATH);
+    cachePOSDPOFE = await loadPosdpofe(process.env.POSDPOFE_PATH);
+    console.log('[MESON] Ofertas cargadas en cachePOSDPOFE:', cachePOSDPOFE.size);
+  }
+}
+
+/**
+ * GET /api/meson/search?term=XXXX
+ * Busca SOLO en POSDPOFE:
+ *  - Por SKU (DP_DATO)
+ *  - Por descripción (DP_DESCRIP)
+ */
+router.get('/api/meson/search', async (req, res) => {
+  try {
+    const termRaw = req.query.term || '';
+    const term = termRaw.trim().toUpperCase();
+
+    if (!term) {
+      return res.status(400).json({ error: 'Falta parámetro "term"' });
+    }
+
+    await ensureDpoCache();
+
+    const resultados = [];
+
+    // cachePOSDPOFE es un Map(sku -> oferta)
+    for (const oferta of cachePOSDPOFE.values()) {
+      const sku = oferta.sku;                // mapeado desde DP_DATO en loadPosdpofe
+      const desc = (oferta.descripcionPromo || '').toUpperCase();
+
+      const coincide =
+        (sku && sku.includes(term)) ||
+        (desc && desc.includes(term));
+
+      if (coincide) {
+        resultados.push({
+          sku,
+          descripcion: oferta.descripcionPromo,
+          precioNormal: oferta.precioNormal,
+          precioOferta: oferta.precioOferta,
+          precioUnitario: oferta.precioUnitario,
+          vigenciaInicio: oferta.vigenciaInicio,
+          vigenciaFin: oferta.vigenciaFin,
+          descuentoPct: oferta.descuentoPct,
+        });
+      }
+    }
+
+    return res.json({ productos: resultados });
+  } catch (err) {
+    console.error('[MESON SEARCH] Error buscando en POSDPOFE:', err);
+    return res.status(500).json({ error: 'Error buscando en POSDPOFE' });
+  }
+});
+
+module.exports = router;
