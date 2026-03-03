@@ -56,7 +56,7 @@ function buildEplEtiqueta({
   return lines.join(eol) + eol;
 }
 
-// ---- envío TCP (impresora con IP)
+// Envío por TCP (si la Zebra está por IP/9100)
 function sendEplTcp(epl) {
   const zebraHost = process.env.ZEBRA_HOST || '192.168.1.50';
   const zebraPort = parseInt(process.env.ZEBRA_PORT || '9100', 10);
@@ -189,5 +189,6 @@ async function printEtiquetaOferta(producto) {
 
 module.exports = {
   printEtiquetaOferta,
+  buildEplEtiqueta,
+  sendEtiqueta,
 };
-``

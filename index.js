@@ -5,12 +5,12 @@ const { port, apiToken } = require("./config/env");
 const { getFirstProducto } = require("./services/pos.service");
 const { printEtiquetaOferta } = require("./services/zebra.service");
 const mesonRoutes = require('./routes/meson.routes');
-
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
-// --- Auth por token (si definiste API_TOKEN)
+// Auth por token (opcional)
 app.use((req, res, next) => {
   const token = req.headers["x-api-token"];
   if (!apiToken) return next();         // si no hay token configurado, no valida
@@ -32,7 +32,11 @@ app.get("/health", (_req, res) => {
 app.get("/api/pos/producto-demo", async (_req, res) => {
   try {
     const producto = await getFirstProducto();
-    if (!producto) return res.status(404).json({ message: "No se encontraron productos" });
+
+    if (!producto) {
+      return res.status(404).json({ message: "No se encontraron productos" });
+    }
+
     res.json({ producto });
   } catch (err) {
     console.error(err);
@@ -40,7 +44,8 @@ app.get("/api/pos/producto-demo", async (_req, res) => {
   }
 });
 
-app.post("/api/pos/print-demo", async (_req, res) => {
+// 2) Demo: imprimir etiqueta de oferta para el primer producto
+app.post('/api/pos/print-demo', async (_req, res) => {
   try {
     const producto = await getFirstProducto();
     if (!producto) return res.status(404).json({ message: "No se encontraron productos" });
