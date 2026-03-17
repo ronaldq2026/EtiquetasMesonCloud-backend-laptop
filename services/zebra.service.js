@@ -1,194 +1,280 @@
 // services/zebra.service.js
+// Zebra ZD220t - 203dpi
+
 const net = require('net');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const { execFile } = require('child_process');
-const { port, apiToken, printMode } = require('../config/env');
 
-// etiquetas / textos (ajusta según tus .CH)
-const LABELS = {
-  LBL_037: "OFERTA",  // equiv a LBL_037 en CHI_ETIQUETAS.ch
-  LBL_038: "HASTA ",  // equiv a LBL_038
-  SIMBOLO_MONEDA: "$",
-};
+// ------------------------------------------------
+// Helpers
+// ------------------------------------------------
 
-// ---- genera EPL equivalente al código VFP que mostraste
-function buildEplEtiqueta({
-  descripIzq,
-  descripDer,
-  precio,
-  barra,
-  fechaTermino,
-  codigo,
-  comision,
-}) {
-  const q = '"';
-  const eol = '\r\n';
+function toNumber(val) {
+  if (val === null || val === undefined) return null;
 
-  descripIzq = (descripIzq ?? '').toString().trim();
-  descripDer = (descripDer ?? '').toString().trim();
-  precio = (precio ?? '').toString().trim();
-  barra = (barra ?? '').toString().trim();
-  fechaTermino = (fechaTermino ?? '').toString().trim();
-  codigo = (codigo ?? '').toString().trim();
-  comision = (comision ?? '').toString().trim();
+  const s = String(val)
+    .replace(/[^\d,.\-]/g, '')
+    .replace(/\./g, '')
+    .replace(',', '.');
 
-  const lines = [
-    'N',
-    'Q590,B160+0',
-    'R0,0',
-    'S2',
-    'D5',
-    'ZB',
-    `A630,81,1,4,3,3,N,${q}${LABELS.LBL_037}${q}`,
-    `A590,391,1,1,2,1,N,${q}${LABELS.LBL_038}${fechaTermino}${q}`,
-    `A550,3,1,2,4,2,N,${q}${descripIzq}${q}`,
-    `A490,1,1,2,4,2,N,${q}${descripDer}${q}`,
-    `A410,71,1,4,5,4,N,${q}${LABELS.SIMBOLO_MONEDA}${q}`,
-    `A420,15,1,4,6,4,N,${q}${precio}${q}`,
-    `A295,10,1,2,1,1,N,${q}${codigo}${q}`,
-    `A270,580,1,2,1,1,N,${q}${comision}${q}`,
-    `B295,171,1,E30,3,30,80,B,${q}${barra}${q}`,
-    'P1',
-  ];
-
-  return lines.join(eol) + eol;
+  const n = Number(s);
+  return Number.isFinite(n) ? n : null;
 }
 
-// Envío por TCP (si la Zebra está por IP/9100)
-function sendEplTcp(epl) {
-  const zebraHost = process.env.ZEBRA_HOST || '192.168.1.50';
-  const zebraPort = parseInt(process.env.ZEBRA_PORT || '9100', 10);
-  return new Promise((resolve, reject) => {
+function formatDateCL(dateStr) {
+
+  if (!dateStr) return '';
+
+  // Si ya viene en formato chileno DD/MM/YYYY
+  if (typeof dateStr === 'string' && dateStr.includes('/')) {
+
+    const parts = dateStr.split('/');
+
+    if (parts.length === 3) {
+
+      const day = parts[0].padStart(2,'0');
+      const month = parts[1].padStart(2,'0');
+      const year = parts[2];
+
+      return day + '/' + month + '/' + year;
+    }
+  }
+
+  // Si viene como ISO o Date válido
+  const d = new Date(dateStr);
+
+  if (isNaN(d.getTime())) return '';
+
+  const day = String(d.getDate()).padStart(2,'0');
+  const month = String(d.getMonth()+1).padStart(2,'0');
+  const year = d.getFullYear();
+
+  return day + '/' + month + '/' + year;
+}
+
+function fmtCLP(val) {
+
+  if (val === null || val === undefined) return '$0';
+
+  const n = typeof val === 'number' ? val : toNumber(val);
+  if (n === null) return val;
+
+  return '$' + n.toLocaleString('es-CL');
+}
+
+// ------------------------------------------------
+// ZPL Builder
+// ------------------------------------------------
+
+function buildZplEtiqueta(data) {
+
+  const precioAntes = data.precioAntes;
+  const precioAhora = data.precioAhora;
+  const producto = data.producto;
+  const sku = data.sku;
+  const ean13 = data.ean13;
+  const codigoBarras = data.codigoBarras;
+  const precioUnitario = data.precioUnitario;
+  const cantidad = data.cantidad || 1;
+  const precioNormal = data.precioNormal;
+  const precioOferta = data.precioOferta;
+  const pr = data.pr || 2;
+  const md = data.md || 5;
+  const barcodeHeight = data.barcodeHeight || 60;
+
+  let validoHasta = formatDateCL(data.validoHasta || data.vigenciaFin);
+
+  const precioPrincipal = fmtCLP(precioAhora || precioOferta || precioNormal);
+  const precioNormalFmt = fmtCLP(precioAntes || precioNormal);
+  const precioUnitarioFmt = fmtCLP(precioUnitario || precioNormal);
+
+  const barcode = ean13 || '';
+
+  let zpl = '';
+
+  zpl += '^XA\n';
+  zpl += '^CI28\n';
+  zpl += '^LH0,0\n';
+  zpl += '^PR' + pr + '\n';
+  zpl += '^MD' + md + '\n';
+
+  zpl += '^PW400\n';
+  zpl += '^LL320\n';
+
+  zpl += '^FO20,10\n';
+  zpl += '^A0N,26,26\n';
+  zpl += '^FB360,2,0,C\n';
+  zpl += '^FD' + (producto || '') + '\n';
+  zpl += '^FS\n';
+
+  zpl += '^FO20,60\n';
+  zpl += '^A0N,20,20\n';
+  zpl += '^FB360,1,0,C\n';
+  zpl += '^FDPRECIO NORMAL: ' + precioNormalFmt + '\n';
+  zpl += '^FS\n';
+
+  zpl += '^FO20,90\n';
+  zpl += '^A0N,70,70\n';
+  zpl += '^FB360,1,0,C\n';
+  zpl += '^FD' + precioPrincipal + '\n';
+  zpl += '^FS\n';
+
+  zpl += '^FO20,160\n';
+  zpl += '^A0N,18,18\n';
+  zpl += '^FD' + precioUnitarioFmt + '\n';
+  zpl += '^FS\n';
+
+  zpl += '^FO20,180\n';
+  zpl += '^A0N,18,18\n';
+  zpl += '^FDPrecio Unit.\n';
+  zpl += '^FS\n';
+
+  // Barcode
+  zpl += '^BY2,2,' + barcodeHeight + '\n';
+  zpl += '^FO110,190\n';
+  zpl += '^BCN,' + barcodeHeight + ',N,N,N\n';
+  zpl += '^FD' + barcode + '\n';
+  zpl += '^FS\n';
+
+  // EAN debajo
+  zpl += '^FO140,255\n';
+  zpl += '^A0N,22,22\n';
+  zpl += '^FD' + barcode + '\n';
+  zpl += '^FS\n';
+  
+  // SKU
+  zpl += '^FO20,285\n';
+  zpl += '^A0N,20,20\n';
+  zpl += '^FDSKU:' + (sku || '') + '\n';
+  zpl += '^FS\n';
+
+  // Fecha
+  zpl += '^FO160,285\n';
+  zpl += '^A0N,20,20\n';
+  zpl += '^FDVALIDO HASTA: ' + (validoHasta || '') + '\n';
+  zpl += '^FS\n';
+
+  zpl += '^PQ' + Math.max(1, parseInt(cantidad,10) || 1) + '\n';
+  zpl += '^XZ\n';
+
+  return zpl;
+}
+
+// ------------------------------------------------
+// TCP Print
+// ------------------------------------------------
+
+function sendTcp(raw) {
+
+  const host = process.env.ZEBRA_HOST || '192.168.1.50';
+  const port = parseInt(process.env.ZEBRA_PORT || '9100', 10);
+
+  return new Promise(function(resolve,reject){
+
     const client = new net.Socket();
-    client.connect(zebraPort, zebraHost, () => {
-      client.write(epl, 'utf8', () => client.end());
+
+    client.connect(port, host, function(){
+
+      const buf = Buffer.isBuffer(raw)
+        ? raw
+        : Buffer.from(raw,'utf8');
+
+      client.write(buf,function(){ client.end(); });
+
     });
+
     client.on('error', reject);
     client.on('close', resolve);
+
   });
 }
 
-// services/zebra.service.js (solo esta función)
-function sendEplWindowsRaw(epl) {
-  const sharePath = process.env.ZEBRA_SHARE_PATH; // p.ej. "\\\\localhost\\flejes"
-  console.log('>> sendEplWindowsRaw sharePath:', sharePath);
+// ------------------------------------------------
+// Windows RAW Print
+// ------------------------------------------------
 
-  const dstRaw = (sharePath || '').trim();
-  if (!dstRaw || !dstRaw.startsWith('\\\\')) {
-    throw new Error(`sharePath inválido para impresión RAW: "${sharePath}"`);
+function sendWindowsRaw(raw) {
+
+  const sharePath = process.env.ZEBRA_SHARE_PATH;
+
+  if (!sharePath || !sharePath.startsWith('\\\\')) {
+    throw new Error('sharePath inválido: ' + sharePath);
   }
 
-  // Archivo temporal (escribe como bytes para evitar problemas de codificación)
-  const tmpName = `label_${Date.now()}.epl`;
-  const tempPath = path.join(os.tmpdir(), tmpName);
-  fs.writeFileSync(tempPath, Buffer.from(epl, 'utf8'));
+  const tmp = path.join(os.tmpdir(),'label_' + Date.now() + '.zpl');
 
-  const src = path.win32.normalize(tempPath);
-  const dst = dstRaw;
-  const dstIp = /^\\\\localhost\\/i.test(dstRaw)
-    ? dstRaw.replace(/^\\\\localhost\\/i, '\\\\127.0.0.1\\')
-    : null;
+  fs.writeFileSync(
+    tmp,
+    Buffer.isBuffer(raw) ? raw : Buffer.from(raw,'utf8')
+  );
 
-  const execCopy = (target) =>
-    new Promise((resolve, reject) => {
+  const execCopy = function(target){
+    return new Promise(function(resolve,reject){
+
       execFile(
         'cmd.exe',
-        ['/d', '/c', 'copy', '/y', '/b', src, target],
-        { windowsHide: true },
-        (error, stdout, stderr) => {
-          if (error) return reject(Object.assign(error, { stdout, stderr }));
-          resolve(stdout);
+        ['/d','/c','copy','/y','/b',tmp,target],
+        { windowsHide:true },
+        function(err,stdout){
+          if (err) reject(err);
+          else resolve(stdout || 'OK');
         }
       );
+
     });
-
-  const execPrint = (target) =>
-    new Promise((resolve, reject) => {
-      execFile(
-        'cmd.exe',
-        ['/d', '/c', 'print', `/D:${target}`, src],
-        { windowsHide: true },
-        (error, stdout, stderr) => {
-          if (error) return reject(Object.assign(error, { stdout, stderr }));
-          resolve(stdout);
-        }
-      );
-    });
-
-  return (async () => {
-    try {
-      const out1 = await execCopy(dst);
-      return `copy: ${out1 || 'OK'}`;
-    } catch (_e1) {
-      try {
-        if (dstIp) {
-          const out2 = await execCopy(dstIp);
-          return `copy(ip): ${out2 || 'OK'}`;
-        }
-      } catch (_e2) {
-        // ignoramos y probamos print
-      }
-      const out3 = await execPrint(dst);
-      return `print: ${out3 || 'OK'}`;
-    }
-  })().finally(() => {
-    fs.unlink(tempPath, () => {});
-  });
-}
-
-async function sendEtiqueta(epl) {
-  console.log('[v0] sendEtiqueta - printMode:', printMode);
-  
-  if (printMode === 'tcp') return sendEplTcp(epl);
-  if (printMode === 'windows-raw') return sendEplWindowsRaw(epl);
-  if (printMode === 'mock-epl') {
-    // Modo mock: guarda el archivo localmente
-    const outDir = path.join(__dirname, '..', 'mock-prints');
-    if (!fs.existsSync(outDir)) {
-      fs.mkdirSync(outDir, { recursive: true });
-    }
-    const filePath = path.join(outDir, `mock_${Date.now()}.epl`);
-    fs.writeFileSync(filePath, epl, 'utf8');
-    console.log(`[MOCK] EPL guardado en: ${filePath}`);
-    return { filePath };
-  }
-  throw new Error(`Modo de impresión no soportado: ${printMode}`);
-}
-
-// ---- usa un producto de posmapre y arma la etiqueta
-async function printEtiquetaOferta(producto) {
-  const payload = {
-    descripIzq:
-      producto?.DESPROD ??
-      producto?.DESCRIPCION ??
-      '',
-    descripDer: '',
-    precio:
-      producto?.PRECIO_OFERTA ??
-      producto?.PRECIO ??
-      producto?.PRECIO1 ??
-      '',
-    barra:
-      producto?.CODBARRA ??
-      producto?.CODBAR ??
-      '',
-    fechaTermino: producto?.FEC_TERMINO ?? '',
-    codigo:
-      producto?.CODPROD ??
-      producto?.CODIGO ??
-      producto?.COD ??
-      '',
-    comision: producto?.COMISION ?? '0',
   };
 
-  const epl = buildEplEtiqueta(payload);
-  return sendEtiqueta(epl);
+  return execCopy(sharePath)
+    .finally(function(){
+      fs.unlink(tmp,function(){});
+    });
 }
 
+// ------------------------------------------------
+// Envío general
+// ------------------------------------------------
+
+async function sendEtiqueta(raw) {
+
+  const mode = (process.env.PRINT_MODE || 'windows-raw').toLowerCase();
+
+  if (mode === 'tcp') return sendTcp(raw);
+  if (mode === 'windows-raw') return sendWindowsRaw(raw);
+
+  if (mode === 'mock') {
+
+    const outDir = path.join(__dirname,'..','mock-prints');
+    fs.mkdirSync(outDir,{recursive:true});
+
+    const filePath = path.join(outDir,'mock_' + Date.now() + '.zpl');
+
+    fs.writeFileSync(filePath,raw,'utf8');
+
+    return {filePath};
+  }
+
+  throw new Error('Modo de impresión no soportado: ' + mode);
+}
+
+// ------------------------------------------------
+// Método principal
+// ------------------------------------------------
+
+async function printEtiquetaOferta(payload) {
+
+  const zpl = buildZplEtiqueta(payload);
+  return sendEtiqueta(zpl);
+
+}
+
+// ------------------------------------------------
+
 module.exports = {
+  buildZplEtiqueta,
   printEtiquetaOferta,
-  buildEplEtiqueta,
   sendEtiqueta,
+  sendWindowsRaw,
+  sendTcp
 };
