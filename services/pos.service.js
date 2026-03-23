@@ -8,7 +8,6 @@ const path = require("path");
 const rutaMAPRE = path.join("P:", "data", "posmapre.dbf");
 const rutaDPOFE = path.join("P:", "data", "posdpofe.dbf");
 
-
 // =============================
 // CACHE GLOBAL
 // =============================

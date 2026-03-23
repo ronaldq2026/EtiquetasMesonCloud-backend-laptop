@@ -1,0 +1,87 @@
+const oracledb = require('oracledb');
+
+// 🔥 SOLO en servidor (modo real)
+if (process.env.ORACLE_MODE === 'real') {
+  oracledb.initOracleClient({
+    libDir: process.env.ORACLE_LIB_DIR
+  });
+}
+
+async function insertarSkuBatch(skus = []) {
+  const conn = await getConnection();
+
+  let count = 0;
+
+  try {
+    for (const sku of skus) {
+      await conn.execute(
+        `BEGIN INTERPRETECORP_OWN.PKG_PAI_SKU.insertar_sku(:sku); END;`,
+        { sku: Number(sku) }
+      );
+      count++;
+	  console.log("Insertando SKU:", sku);
+    }
+    
+    await conn.commit();
+	console.log("Commit ejecutado");
+    return count;
+
+  } catch (err) {
+    console.error("❌ Error en batch:", err);
+    await conn.rollback(); // 🔥 importante también
+    throw err;
+
+  } finally {
+    await conn.close();
+  }
+}
+
+async function getConnection() {
+  return await oracledb.getConnection({
+    user: process.env.ORACLE_USER,
+    password: process.env.ORACLE_PASSWORD,
+    connectString: process.env.ORACLE_CONNECTION_STRING
+  });
+}
+
+async function getCentralizado() {
+  const conn = await getConnection();
+
+  const result = await conn.execute(
+    `select sku,fecha_carga,usuario_carga from pai_sku`
+  );
+
+  await conn.close();
+
+  return result.rows.map(r => ({
+    sku: String(r[0]).trim(),
+    descripcion: r[1]?.trim()
+  }));
+}
+
+async function getSkusCentralizados() {
+
+  const conn = await getConnection();
+
+  const result = await conn.execute(
+    `BEGIN INTERPRETECORP_OWN.PKG_PAI_SKU.cursor_skus(:cursor); END;`,
+    {
+      cursor: { dir: oracledb.BIND_OUT, type: oracledb.CURSOR }
+    }
+  );
+
+  const rs = result.outBinds.cursor;
+
+  const rows = await rs.getRows(10000);
+
+  await rs.close();
+  await conn.close();
+
+  return rows.map(r => String(r[0]));
+}
+
+
+module.exports = {
+  getCentralizado,
+  insertarSkuBatch
+};
