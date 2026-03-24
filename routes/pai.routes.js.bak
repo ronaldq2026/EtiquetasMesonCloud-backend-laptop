@@ -98,10 +98,7 @@ router.get('/api/pai/leer-centralizado', async (req, res) => {
         marca: p.marca,
         precioNormal: p.precioNormal,
         precioUnitario: p.precioUnitario,
-        precioOferta: p.precioOferta,		
-		ean13: p.ean13,
-		unidadMedida: p.unidadMedida,
-		vigenciaFin: p.vigenciaFin
+        precioOferta: p.precioOferta
       };
 
       if (p.precioOferta) {
