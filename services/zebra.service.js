@@ -1,11 +1,27 @@
 // services/zebra.service.js
-// Zebra ZD220t - 203dpi
+// Zebra ZD220t - GC420T  - 60x30 mm
 
 const net = require('net');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const { execFile } = require('child_process');
+
+const { detectZebraPrinter } = require('./zebra.detector');
+
+let PRINTER = {
+  type: 'UNKNOWN',
+  name: null
+};
+
+(async () => {
+  try {
+    PRINTER = await detectZebraPrinter();
+    console.log('🖨️ Zebra detectada:', PRINTER);
+  } catch (err) {
+    console.error('❌ Error detectando impresora Zebra', err);
+  }
+})();
 
 // ------------------------------------------------
 // Helpers
@@ -54,28 +70,120 @@ function fmtCLP(val) {
 // ------------------------------------------------
 
 function buildZplEtiqueta(data) {
+  switch (PRINTER.type) {
+    case 'GC420T':
+      return buildZplGC420(data);
 
-  const producto = data.producto || '';
-  const sku = data.sku || '';
-  const ean13 = data.ean13 || '';
-  const um = data.unidadMedida || '';
+    case 'ZD220T':
+    default:
+      return buildZplZD220(data);
+  }
+}
+
+// ------------------------------------------------
+// Datos base comunes a ambas impresoras
+// ------------------------------------------------
+function buildEtiquetaBase(data) {
 
   const precioNormal = toNumber(data.precioNormal);
   const precioOferta = toNumber(data.precioOferta);
   const precioUnitario = toNumber(data.precioUnitario);
 
-  const cantidad = data.cantidad || 1;
-  const pr = data.pr || 2;
-  const md = data.md || 5;
+  return {
+    producto: data.producto || '',
+    sku: data.sku || '',
+    ean13: data.ean13 || '',
+    um: data.unidadMedida || '',
 
+    precioNormal,
+    precioOferta,
+    precioUnitario,
+
+    precioNormalFmt: fmtCLP(precioNormal),
+    precioOfertaFmt: fmtCLP(precioOferta),
+    precioPrincipal: fmtCLP(precioOferta ?? precioNormal),
+    precioUnitarioFmt: fmtCLP(precioUnitario),
+
+    validoHasta: formatDateCL(data.validoHasta || data.vigenciaFin),
+
+    pr: data.pr || 2,
+    md: data.md || 5
+  };
+}
+
+function buildZplGC420(data) {
+
+  const d = buildEtiquetaBase(data);
+
+  let zpl = '';
+
+  zpl += '^XA\n';
+  zpl += '^CI28\n';
+
+  // 🔥 SOLO GC420t
+  zpl += '^MNN\n';
+  zpl += '^MTT\n';
+
+  zpl += '^PW450\n';
+  zpl += '^LL220\n';
+  zpl += '^PR3\n';
+  zpl += '^MD5\n';
+
+  // Producto
+  zpl += '^FO15,5^A0N,22,22^FB420,2,0,C^FD' +
+         d.producto + '^FS\n';
+
+  // Precio normal (si existe)
+  if (d.precioNormal && d.precioNormal > 0) {
+    zpl += '^FO15,35^A0N,18,18^FB420,1,0,C^FDPRECIO NORMAL: ' +
+           d.precioNormalFmt + '^FS\n';
+  }
+
+  // Precio principal
+  zpl += '^FO15,55^A0N,50,50^FB420,1,0,C^FD' +
+         d.precioPrincipal + '^FS\n';
+
+  // PRECIO UNITARIO
+  zpl += '^FO5,120\n';
+  zpl += '^A0N,24,24\n';
+  zpl += '^FD' + d.precioUnitarioFmt + (d.um ? ' / ' + d.um : '') + '\n';
+  zpl += '^FS\n';
+
+  zpl += '^FO10,145\n';
+  zpl += '^A0N,18,18\n';
+  zpl += '^FDPrecio Unit.\n';
+  zpl += '^FS\n';		 
+
+  // Código de barras
+  zpl += '^BY1,2,50\n';
+  zpl += '^FO140,115^BCN,50,N,N,N^FD' +
+         d.ean13 + '^FS\n';
+
+  // Texto EAN
+  zpl += '^FO120,165^A0N,18,18^FB200,1,0,C^FD' +
+         d.ean13 + '^FS\n';
+
+	// SKU + FECHA
+  zpl += '^FO20,200\n';
+  zpl += '^A0N,18,18\n';
+  zpl += '^FDSKU:' + d.sku + '\n';
+  zpl += '^FS\n';
+
+  zpl += '^FO200,200\n';
+  zpl += '^A0N,18,18\n';
+  zpl += '^FDVALIDO HASTA: ' + d.validoHasta + '\n';
+  zpl += '^FS\n';
+
+  zpl += '^XZ\n';
+
+  return zpl;
+}
+
+function buildZplZD220(data) {
+
+  const d = buildEtiquetaBase(data);
   const barcodeHeight = 30;
-
-  const validoHasta = formatDateCL(data.validoHasta || data.vigenciaFin);
-
-  const precioPrincipal = fmtCLP(precioOferta ?? precioNormal);
-  const precioNormalFmt = fmtCLP(precioNormal);
-  const precioUnitarioFmt = fmtCLP(precioUnitario);
-
+  
   let zpl = '';
 
   zpl += '^XA\n';
@@ -87,8 +195,8 @@ function buildZplEtiqueta(data) {
   zpl += '^LS0\n';
 
   // 🔧 VELOCIDAD / OSCURIDAD
-  zpl += '^PR' + pr + '\n';
-  zpl += '^MD' + md + '\n';
+  zpl += '^PR' + d.pr + '\n';
+  zpl += '^MD' + d.md + '\n';
 
   // 🔧 TAMAÑO
   zpl += '^PW480\n';
@@ -100,17 +208,17 @@ function buildZplEtiqueta(data) {
   zpl += '^FO20,0\n';
   zpl += '^A0N,24,24\n';
   zpl += '^FB440,2,0,C\n';
-  zpl += '^FD' + producto + '\n';
+  zpl += '^FD' + d.producto + '\n';
   zpl += '^FS\n';
 
   // -------------------------
   // PRECIO NORMAL
   // -------------------------
-  if (precioNormal && precioNormal > 0) {
+  if (d.precioNormal && d.precioNormal > 0) {
     zpl += '^FO20,55\n';
     zpl += '^A0N,18,18\n';
     zpl += '^FB440,1,0,C\n';
-    zpl += '^FDPRECIO NORMAL: ' + precioNormalFmt + '\n';
+    zpl += '^FDPRECIO NORMAL: ' + d.precioNormalFmt + '\n';
     zpl += '^FS\n';
   }
 
@@ -120,7 +228,7 @@ function buildZplEtiqueta(data) {
   zpl += '^FO20,75\n';
   zpl += '^A0N,55,55\n';
   zpl += '^FB440,1,0,C\n';
-  zpl += '^FD' + precioPrincipal + '\n';
+  zpl += '^FD' + d.precioPrincipal + '\n';
   zpl += '^FS\n';
 
   // -------------------------
@@ -128,7 +236,7 @@ function buildZplEtiqueta(data) {
   // -------------------------
   zpl += '^FO5,120\n';
   zpl += '^A0N,24,24\n';
-  zpl += '^FD' + precioUnitarioFmt + (um ? ' / ' + um : '') + '\n';
+  zpl += '^FD' + d.precioUnitarioFmt + (d.um ? ' / ' + d.um : '') + '\n';
   zpl += '^FS\n';
 
   zpl += '^FO10,145\n';
@@ -142,25 +250,25 @@ function buildZplEtiqueta(data) {
   zpl += '^BY1,2,' + barcodeHeight + '\n';
   zpl += '^FO180,135\n';
   zpl += '^BCN,' + barcodeHeight + ',N,N,N\n';
-  zpl += '^FD' + ean13 + '\n';
+  zpl += '^FD' + d.ean13 + '\n';
   zpl += '^FS\n';
 
   // EAN TEXTO
   zpl += '^FO170,170\n';
   zpl += '^A0N,18,18\n';
   zpl += '^FB200,1,0,C\n';
-  zpl += '^FD' + ean13 + '\n';
+  zpl += '^FD' + d.ean13 + '\n';
   zpl += '^FS\n';
 
   // SKU + FECHA
   zpl += '^FO20,200\n';
   zpl += '^A0N,18,18\n';
-  zpl += '^FDSKU:' + sku + '\n';
+  zpl += '^FDSKU:' + d.sku + '\n';
   zpl += '^FS\n';
 
   zpl += '^FO200,200\n';
   zpl += '^A0N,18,18\n';
-  zpl += '^FDVALIDO HASTA: ' + validoHasta + '\n';
+  zpl += '^FDVALIDO HASTA: ' + d.validoHasta + '\n';
   zpl += '^FS\n';
 
   zpl += '^XZ\n';
@@ -195,10 +303,12 @@ function sendTcp(raw) {
 
 function sendWindowsRaw(raw) {
 
-  const sharePath = process.env.ZEBRA_SHARE_PATH;
+  const sharePath =
+    process.env.ZEBRA_SHARE_PATH ||
+    (PRINTER.name ? `\\\\localhost\\${PRINTER.name}` : null);
 
   if (!sharePath || !sharePath.startsWith('\\\\')) {
-    throw new Error('sharePath inválido: ' + sharePath);
+    throw new Error('No se pudo determinar impresora Zebra');
   }
 
   const tmp = path.join(os.tmpdir(),'label_' + Date.now() + '.zpl');
@@ -243,32 +353,54 @@ async function printEtiquetaOferta(payload) {
 }
 
 // 🔥 MASIVO (LA SOLUCIÓN)
+// 🔥 MASIVO (ZPL separado por modelo)
 async function printEtiquetasBatch(productos) {
 
   let zpl = '';
 
-  // ✅ CALIBRACIÓN REAL (UNA VEZ)
-  zpl += '^XA';
-  zpl += '^MNN';     // Modo Tear-Off
-  zpl += '^PW480';
-  zpl += '^LL240';   // AJUSTAR SI ES NECESARIO
-  zpl += '^XZ\n';
+  switch (PRINTER.type) {
 
+    // ==========================
+    // ✅ GC420T (tiene GAP real)
+    // ==========================
+    case 'GC420T':
+      zpl += '^XA\n';
+      zpl += '^MNN\n';    // Tear-Off
+      zpl += '^MTT\n';    // ✅ Media Tracking (GAP) SOLO GC420T
+      zpl += '^PW450\n';  // Ancho GC420T
+      zpl += '^LL220\n';  // Alto GC420T
+      zpl += '^XZ\n';
+      break;
+
+    // ==========================
+    // ✅ ZD220T (NO TOCAR)
+    // ==========================
+    case 'ZD220T':
+    default:
+      zpl += '^XA\n';
+      zpl += '^MNN\n';    // Tear-Off
+      zpl += '^PW480\n';  // Ancho ZD220T
+      zpl += '^LL240\n';  // Alto ZD220T
+      zpl += '^XZ\n';
+      break;
+  }
+
+  // --------------------------
+  // Etiquetas individuales
+  // --------------------------
   for (const p of productos) {
     const qty = Math.max(1, parseInt(p.cantidad, 10) || 1);
 
     for (let i = 0; i < qty; i++) {
       zpl += buildZplEtiqueta({
         ...p,
-        cantidad: 1 // 🔥 IMPORTANTE
+        cantidad: 1   // 🔥 importante
       });
     }
   }
 
   return sendEtiqueta(zpl);
 }
-
-// ------------------------------------------------
 
 module.exports = {
   buildZplEtiqueta,
