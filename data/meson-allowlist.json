@@ -1,1489 +1,1059 @@
 {
   "skus": [
-    "94397",
-    "94460",
-    "94461",
-    "94462",
-    "94463",
-    "94485",
-    "94547",
-    "94590",
-    "94583",
-    "63462",
-    "93679",
-    "93974",
-    "88136",
-    "89112",
-    "89113",
-    "89120",
-    "91966",
-    "91967",
-    "91965",
-    "94940",
-    "94919",
-    "67791",
-    "40891",
-    "82645",
-    "91440",
-    "82956",
-    "93025",
-    "91300",
-    "94748",
-    "75289",
-    "94720",
-    "94722",
-    "94723",
-    "94724",
-    "94725",
-    "94726",
-    "94645",
-    "94638",
-    "86972",
-    "92409",
-    "95587",
-    "96145",
-    "96461",
-    "96462",
-    "94339",
-    "94350",
-    "94352",
-    "94351",
-    "92385",
-    "92386",
-    "96643",
-    "96645",
-    "96660",
-    "96662",
-    "96728",
-    "93141",
-    "93142",
-    "93482",
-    "94057",
-    "94058",
-    "94059",
-    "94248",
-    "94250",
-    "94260",
-    "96219",
-    "96217",
-    "96218",
-    "95998",
-    "95935",
-    "95936",
-    "95937",
-    "95938",
-    "95930",
-    "95931",
-    "95932",
-    "95933",
-    "95934",
-    "96681",
-    "94587",
-    "94591",
-    "91422",
-    "90550",
-    "94356",
-    "94357",
-    "94358",
-    "95790",
-    "46105",
-    "89536",
-    "72820",
-    "75270",
-    "91670",
-    "93492",
-    "95954",
-    "95836",
-    "89334",
-    "88294",
-    "18959",
-    "91874",
-    "45330",
-    "36782",
-    "92958",
-    "95269",
-    "95300",
-    "95301",
-    "64466",
-    "64467",
-    "73000",
-    "82426",
-    "76161001",
-    "76162001",
-    "92233",
-    "92234",
-    "95607",
-    "95805",
-    "95792",
-    "95711",
-    "95712",
-    "95730",
-    "95713",
-    "95714",
-    "95732",
-    "50698",
-    "16546",
-    "85477",
-    "67738",
-    "69901",
-    "92030",
-    "79731",
-    "93524",
-    "93457",
-    "92830",
-    "94791",
-    "96483",
-    "93179",
-    "20755",
-    "90644",
-    "71903",
-    "94595",
-    "95547",
-    "32364003",
-    "93273",
-    "93473",
-    "93449",
-    "93317",
-    "91509",
-    "93633",
-    "92124",
-    "93634",
-    "96666",
-    "96686",
-    "96687",
-    "95447",
-    "95449",
-    "87958",
-    "92037",
-    "91605",
-    "79924",
-    "94930",
-    "95748",
-    "94561",
-    "94702",
-    "94703",
-    "94704",
-    "94582",
-    "95817",
-    "95818",
-    "95819",
-    "93447",
-    "93672",
-    "23",
-    "91902",
-    "91903",
-    "47395",
-    "64703",
-    "85868",
-    "93567",
-    "88628",
-    "84822",
-    "25567",
-    "46713",
-    "46714",
-    "83940",
-    "15414",
-    "89070",
-    "39823",
-    "65476",
-    "65341",
-    "94488",
-    "94489",
-    "94953",
-    "94951",
-    "96823",
-    "96824",
-    "94419",
-    "94425",
-    "91603",
-    "96822",
-    "81110",
-    "81111",
-    "96479",
-    "94960",
-    "95140",
-    "96492",
-    "90031",
-    "90033",
-    "90034",
-    "92254",
-    "93546",
-    "93547",
-    "96435",
-    "96340",
-    "93550",
-    "96339",
-    "93549",
-    "96342",
-    "93552",
-    "96341",
-    "93551",
-    "94678",
-    "94961",
-    "94406",
-    "90437",
-    "93516",
-    "94926",
-    "94973",
-    "95060",
-    "94928",
-    "94929",
-    "49014",
-    "95070",
-    "91349",
-    "91372",
-    "91351",
-    "96636",
-    "93565",
-    "93566",
-    "81748",
-    "92897",
-    "82109",
-    "49705",
-    "80968",
-    "90268",
-    "95885",
-    "48962",
-    "95520",
-    "95625",
-    "94654",
-    "96620",
-    "96579",
-    "96580",
-    "70669",
-    "70847",
-    "69105",
-    "75523",
-    "74369",
-    "70457",
-    "74397",
-    "94417",
-    "95063",
-    "87930",
-    "92915",
-    "93692",
-    "91343",
-    "91516",
-    "91514",
-    "90903",
-    "93410",
-    "79120",
-    "93680",
-    "68121",
-    "95529",
-    "95530",
-    "95531",
-    "96842",
-    "96892",
-    "96891",
-    "73888",
-    "92270",
-    "96923",
-    "72174",
-    "94249",
-    "94380",
-    "86110",
-    "83819",
-    "77934",
-    "88684",
-    "85666",
-    "95320",
-    "95322",
-    "95633",
-    "95572",
-    "96038",
-    "96459",
-    "90529",
-    "89096"
+    "3661434000515",
+    "3282779003124",
+    "3282770207774",
+    "3337871331290",
+    "8429420248977",
+    "7804625952002",
+    "8429420200678",
+    "4005800223136",
+    "3661434002687",
+    "3282770153477",
+    "3282770400786",
+    "799192431593",
+    "8934839135584",
+    "8934839135614",
+    "7804907988965",
+    "7804907981539",
+    "7500435182201",
+    "7896009498794",
+    "7798140259381",
+    "7500435203975",
+    "7506339315899",
+    "3337875597388",
+    "5056683103236",
+    "4006000013626",
+    "30142442",
+    "8411135353770",
+    "4006000043838",
+    "7800004000722",
+    "7861073971030",
+    "7500435247139",
+    "7506306254374",
+    "7804918451649",
+    "7509546654034",
+    "99176480310",
+    "7804945011441",
+    "799192420504",
+    "3600531465247",
+    "6902395970071",
+    "30146815",
+    "799192431555",
+    "75486088163",
+    "7891150103504",
+    "799192431487",
+    "7509552904819",
+    "3600523817481",
+    "7804637360482",
+    "2000000746753",
+    "7702098041776",
+    "7800004399536",
+    "7793640992677",
+    "7800004508594",
+    "705928050754",
+    "7800004005932",
+    "7804671180664",
+    "7800038000675",
+    "793969066834",
+    "7800004003884",
+    "7800046004979",
+    "705928010079",
+    "2000000755236",
+    "7800004002160",
+    "7804918500767",
+    "7800004006410",
+    "781584323258",
+    "7800038042729",
+    "7800004005130",
+    "705928500754",
+    "7804900000817",
+    "7804918452615",
+    "2000000746630",
+    "7804918451663",
+    "2000000727097",
+    "2000000727073",
+    "7804620836222",
+    "2000000742083",
+    "7800050003081",
+    "7800004507825",
+    "7800044001321",
+    "7800046005815",
+    "7800068120114",
+    "781584323036",
+    "781584323043",
+    "781584322909",
+    "781584323180",
+    "7804629440581",
+    "5425002406806",
+    "659525128937",
+    "610985133565",
+    "7500435120067",
+    "2000000754994",
+    "7809576419338",
+    "7800004007325",
+    "7501159731232",
+    "183405000094",
+    "781584323074",
+    "7805070002953",
+    "7800046005822",
+    "781584322886",
+    "7800004001507",
+    "83078003647",
+    "83078004644",
+    "7509546052861",
+    "7509546683799",
+    "7791293049625",
+    "7791293049618",
+    "7896009498091",
+    "7794640170720",
+    "7896009499166",
+    "8934839135591",
+    "7794640170133",
+    "4210201826613",
+    "7500435245814",
+    "4006000043821",
+    "7891024020210",
+    "7506339323184",
+    "7794640172731",
+    "7794640171741",
+    "7800004000302",
+    "7794640171703",
+    "7509546694986",
+    "7509546690308",
+    "7509546699318",
+    "7801620010737",
+    "7707254792554",
+    "841058004547",
+    "8809126646107",
+    "739802462364",
+    "78026537",
+    "7800004004126",
+    "7804918402153",
+    "2000000632438",
+    "7804671180282",
+    "793969066520",
+    "793969066612",
+    "4987188509067",
+    "7804918401842",
+    "7800004001781",
+    "7800046004993",
+    "7804656850209",
+    "5425002405014",
+    "7804918450178",
+    "7793640992691",
+    "5000158103689",
+    "2000000727011",
+    "793969066766",
+    "7800004004874",
+    "7800004001637",
+    "5404017406858",
+    "7804918450154",
+    "7800044000669",
+    "7804900000794",
+    "2000000742304",
+    "2000000755014",
+    "7800007771193",
+    "7800004261505",
+    "7800004007196",
+    "7804918500835",
+    "7800046004887",
+    "7800004399567",
+    "7702098004146",
+    "7809561400099",
+    "793969066636",
+    "793969066759",
+    "7804676580483",
+    "781584322916",
+    "7800068011566",
+    "7800038042743",
+    "7800004348008",
+    "7800004006892",
+    "7809591401806",
+    "7793640992790",
+    "7800059002412",
+    "7800004000500",
+    "8906158550324",
+    "7804656850001",
+    "781584321445",
+    "781584322961",
+    "781584323142",
+    "7804918452936",
+    "736085217599",
+    "793969066599",
+    "7804918453247",
+    "781584323104",
+    "781584322923",
+    "781584322947",
+    "781584323128",
+    "840093101525",
+    "7804676580537",
+    "799192726798",
+    "8411135352766",
+    "8411135654792",
+    "8411135008113",
+    "8411135008137",
+    "8411135008120",
+    "7500435259026",
+    "7500435259040",
+    "7500435258999",
+    "7500435258944",
+    "7800004006175",
+    "7804651938742",
+    "7804651939381",
+    "7804907938663",
+    "4006000291840",
+    "7896007552740",
+    "7809604031631",
+    "7702027435607",
+    "7804641331393",
+    "2000000689661",
+    "799192726774"
   ],
   "items": [
     {
-      "sku": "94397",
-      "descripcion": "SET TRABAS BACK TO SCHOOL 2 UN"
+      "sku": "3661434000515",
+      "descripcion": "AGUA TERMAL URIAGE 150ML"
     },
     {
-      "sku": "94460",
-      "descripcion": "SET COLLETS BACK TO SCHOOL 18 UN"
-    },
-    {
-      "sku": "94461",
-      "descripcion": "SET TRABAS BACK TO SCHOOL 10 UN"
-    },
-    {
-      "sku": "94462",
-      "descripcion": "SET 4 COLLET MALLA BACK TO SCHOOL"
-    },
-    {
-      "sku": "94463",
-      "descripcion": "CINTILLO DIENTES BACK TO SCHOOL 2UN"
-    },
-    {
-      "sku": "94485",
-      "descripcion": "COLLET GENERO BACK TO SCHOOL"
-    },
-    {
-      "sku": "94547",
-      "descripcion": "SET 2 COLLET BACK TO SCHOOL"
-    },
-    {
-      "sku": "94590",
-      "descripcion": "PACK DE PINZAS OBLICUA/RECTA F. AHUMADA"
-    },
-    {
-      "sku": "94583",
-      "descripcion": "PACK CORTAUNA GRANDE + CORTAUNA CHICO"
-    },
-    {
-      "sku": "63462",
-      "descripcion": "TOALLA HIG. KOTEX U.FINA SUA C/A.24UN"
-    },
-    {
-      "sku": "93679",
-      "descripcion": "TOA.KOTEX UF NOCTURNA PURO NATURAL X8 UN"
-    },
-    {
-      "sku": "93974",
-      "descripcion": "TOALLA NOSOTRAS LARGA TELA SUAVE X 24UN"
-    },
-    {
-      "sku": "88136",
-      "descripcion": "TOA BUENAS NOCHES ULTR NOSOTRAS MALLA 8U"
-    },
-    {
-      "sku": "89112",
-      "descripcion": "RICOLA CARAMELO EUCALIPTUS 27,5GR SIN AZ"
-    },
-    {
-      "sku": "89113",
-      "descripcion": "RICOLA CARAMELO CRANBERRY 27,5 GR"
-    },
-    {
-      "sku": "89120",
-      "descripcion": "RICOLA CARAMELO LIMON 27,5 GR SIN AZUCAR"
-    },
-    {
-      "sku": "91966",
-      "descripcion": "AGUA MINERAL CACHANTUN C/GAS BOT. 600"
-    },
-    {
-      "sku": "91967",
-      "descripcion": "AGUA MINERAL CACHANTUN L/GAS BOT. 600"
-    },
-    {
-      "sku": "91965",
-      "descripcion": "AGUA MINERAL CACHANTUN S/GAS BOT. 600"
-    },
-    {
-      "sku": "94940",
-      "descripcion": "CACHANTUN STRONG GAS 600ML"
-    },
-    {
-      "sku": "94919",
-      "descripcion": "RED BULL ZERO 250ML"
-    },
-    {
-      "sku": "67791",
-      "descripcion": "BEB. RED BULL SUGARFREE  250ML"
-    },
-    {
-      "sku": "40891",
-      "descripcion": "BEB.RED BULL ENERGY LATA 250ML."
-    },
-    {
-      "sku": "82645",
-      "descripcion": "RED BULL YELLOW TROPICAL 250ML"
-    },
-    {
-      "sku": "91440",
-      "descripcion": "RED BULL RED SANDIA 250ML"
-    },
-    {
-      "sku": "82956",
-      "descripcion": "CORTAUNA TRIM BLISTER 1UN"
-    },
-    {
-      "sku": "93025",
-      "descripcion": "DISCO MENSTRUAL BENTLEY 1 UN"
-    },
-    {
-      "sku": "91300",
-      "descripcion": "TOALLITAS HUMEDAS EMUBABY WATER 80UN"
-    },
-    {
-      "sku": "94748",
-      "descripcion": "EMUBABY TOALLITAS HUMEDAS THREE PACK"
-    },
-    {
-      "sku": "75289",
-      "descripcion": "MAMAD.MAM SILICONA 4+ 330ML"
-    },
-    {
-      "sku": "94720",
-      "descripcion": "JABON LIQ CRM LACTOUREA REPARADOR 700ML"
-    },
-    {
-      "sku": "94722",
-      "descripcion": "JABON LIQ CRM LACTOUREA REAF 700ML"
-    },
-    {
-      "sku": "94723",
-      "descripcion": "JABON LIQ CRM LACTOUREA OLEO 700ML"
-    },
-    {
-      "sku": "94724",
-      "descripcion": "DESODORANTE SPRAY LACTOUREA 200 ML"
-    },
-    {
-      "sku": "94725",
-      "descripcion": "LACTOUREA DESODORANTE ROLL ON 50ML"
-    },
-    {
-      "sku": "94726",
-      "descripcion": "LACTOVIT JABON INTIMO 250ML"
-    },
-    {
-      "sku": "94645",
-      "descripcion": "CREMA CORPORAL LACTOUREA REPARADORA 1LT"
-    },
-    {
-      "sku": "94638",
-      "descripcion": "CREMA CORPORAL LACTOUREA MOUSSE 400 ML"
-    },
-    {
-      "sku": "86972",
-      "descripcion": "CRM.PETRIZZIO HIDRAT.HIDRASHOCK DIA 50G"
-    },
-    {
-      "sku": "92409",
-      "descripcion": "CREMA HS PRO PETRIZZIO LUMINOSIDAD 50GR"
-    },
-    {
-      "sku": "95587",
-      "descripcion": "PETRIZZIO HIDRA SHOCK ANTI IMPER DIA 50G"
-    },
-    {
-      "sku": "96145",
-      "descripcion": "NIVEA FACE CARE SERUM EPIGENETICS 30ML"
-    },
-    {
-      "sku": "96461",
-      "descripcion": "NIVEA LIP CARE GLOSS BERRY"
-    },
-    {
-      "sku": "96462",
-      "descripcion": "NIVEA LIP CARE GLOSS GLOW"
-    },
-    {
-      "sku": "94339",
-      "descripcion": "ETIENNE EDP LIGHT BLUE INF 30ML"
-    },
-    {
-      "sku": "94350",
-      "descripcion": "ETIENNE EDP ROSE 30ML"
-    },
-    {
-      "sku": "94352",
-      "descripcion": "EDP MILLIONAIRE RED INTENSE 30ML"
-    },
-    {
-      "sku": "94351",
-      "descripcion": "EDT MILLIONAIRE RED EDITION 30ML"
-    },
-    {
-      "sku": "92385",
-      "descripcion": "CREMA GEL FACIAL CICATRIC.PORCELANA 50GR"
-    },
-    {
-      "sku": "92386",
-      "descripcion": "SERUM PEELING FACIAL CICA.PORCELANA 30ML"
-    },
-    {
-      "sku": "96643",
-      "descripcion": "DOVE SERUM CORP EX SEC HIALUR 200ML"
-    },
-    {
-      "sku": "96645",
-      "descripcion": "DOVE SER CORP EX ASP PANTENOL 200ML"
-    },
-    {
-      "sku": "96660",
-      "descripcion": "DOVE SERUM CORP FIRM PRO-RETIN 200ML"
-    },
-    {
-      "sku": "96662",
-      "descripcion": "DOVE SERUM CORP SEC PRO-CERAM 200ML"
-    },
-    {
-      "sku": "96728",
-      "descripcion": "DOVE SERUM CORP TONO UNIF NIACI 12X200ML"
-    },
-    {
-      "sku": "93141",
-      "descripcion": "CREMA DE MANOS LECHUGA ARGÁN 50 ML"
-    },
-    {
-      "sku": "93142",
-      "descripcion": "CREMA DE MANOS LECHUGA CASTAÑA 50 ML"
-    },
-    {
-      "sku": "93482",
-      "descripcion": "SERUM LOREAL GLYCOLIC BRIGHT 30ML"
-    },
-    {
-      "sku": "94057",
-      "descripcion": "BALSAMO LAB CARMEX CEREZA STICK 4,25 GR"
-    },
-    {
-      "sku": "94058",
-      "descripcion": "BALSAMO LABIAL CARMEX BARRA WINT 4,25 GR"
-    },
-    {
-      "sku": "94059",
-      "descripcion": "BﾁLSAMO LAB CARMEX FRUTILLA TUBO 10GR"
-    },
-    {
-      "sku": "94248",
-      "descripcion": "BALSAMO LABIAL CARMEX POTE 7,5 GR"
-    },
-    {
-      "sku": "94250",
-      "descripcion": "BﾁLSAMO LABIAL CARMEX CLﾁSICO TUBO 10GR"
-    },
-    {
-      "sku": "94260",
-      "descripcion": "BﾁLSAMO LABIAL CARMEX STICK FPS15 4,25G"
-    },
-    {
-      "sku": "96219",
-      "descripcion": "BALSAMO FPS15 LAB FR CH+STRA+PCH MGO 3UN"
-    },
-    {
-      "sku": "96217",
-      "descripcion": "BALSAMO PACK LAB TROP&CUPCKE HIDR FPS15"
-    },
-    {
-      "sku": "96218",
-      "descripcion": "BALSAMO PACK LAB PS FRT&SG PM HIDR FPS15"
-    },
-    {
-      "sku": "95998",
-      "descripcion": "RAYFILTER SOLAR SPF50 FAMILIAR 370ML"
-    },
-    {
-      "sku": "95935",
-      "descripcion": "RAYF BARRA FPS30 CON COLOR 6G"
-    },
-    {
-      "sku": "95936",
-      "descripcion": "RAYF BARRA FPS30 BLANCO 6G"
-    },
-    {
-      "sku": "95937",
-      "descripcion": "RAYFILTER BARRA FPS30 NARANJA 6G"
-    },
-    {
-      "sku": "95938",
-      "descripcion": "RAYFILTER BARRA FPS30 CELESTE 6G"
-    },
-    {
-      "sku": "95930",
-      "descripcion": "RAYFILTER SOLAR ANTIOXIDANTE FPS50 190G"
-    },
-    {
-      "sku": "95931",
-      "descripcion": "RAYF SPORT FPS50 190G"
-    },
-    {
-      "sku": "95932",
-      "descripcion": "RAYFILTER COCO-MONOI FCS30 190G"
-    },
-    {
-      "sku": "95933",
-      "descripcion": "RAYFILTER BABY KIDS FCS50 190G"
-    },
-    {
-      "sku": "95934",
-      "descripcion": "RAYFILTER KIDS FCS50 SPRAY 200ML"
-    },
-    {
-      "sku": "96681",
-      "descripcion": "CHAPSTICK BALSAMO LABIAL CAKE BATTER 4G"
-    },
-    {
-      "sku": "94587",
-      "descripcion": "ESPEJO AUMX10 Y PINZA FARMACIAS AHUMADA"
-    },
-    {
-      "sku": "94591",
-      "descripcion": "ENCRESPADOR PESTANAS FARMACIAS AHUMADA"
-    },
-    {
-      "sku": "91422",
-      "descripcion": "MAQ. AFEIT.DES.GILLETTE VENUS INTIMA 2UN"
-    },
-    {
-      "sku": "90550",
-      "descripcion": "TAMPON TAMPAX PEARL SUPER 8UN"
-    },
-    {
-      "sku": "94356",
-      "descripcion": "SHAMPOO NATURALOE RULOS DEF 350ML"
-    },
-    {
-      "sku": "94357",
-      "descripcion": "MASCARA RULOS NATURALOE DEF 300ML"
-    },
-    {
-      "sku": "94358",
-      "descripcion": "CREMA DE PEINAR NATURALOE RULOS 250ML"
-    },
-    {
-      "sku": "95790",
-      "descripcion": "NATURALOE GEL PARA RULOS DEFINIDOS 400ML"
-    },
-    {
-      "sku": "46105",
-      "descripcion": "COREGA ULTRA CREMA ADHES.SIN SABOR 40 GR"
-    },
-    {
-      "sku": "89536",
-      "descripcion": "CRM ADH DEN ULTRA COREGA MÁX SELL SS 70G"
-    },
-    {
-      "sku": "72820",
-      "descripcion": "P. DENT.SENSODYNE REPAR.& PROTEG.100GR."
-    },
-    {
-      "sku": "75270",
-      "descripcion": "P. DENT.SENSODYNE REP.&PROT.BLANQ.100GR"
-    },
-    {
-      "sku": "91670",
-      "descripcion": "P. DENT SENSODYNE PROT. COMPL WHITE 90GR"
-    },
-    {
-      "sku": "93492",
-      "descripcion": "P.DENTAL SENSODY.COMPLETA ANTI SARRO 49G"
-    },
-    {
-      "sku": "95954",
-      "descripcion": "SENSODYNE CLINICAL REPAIR TP 100G"
-    },
-    {
-      "sku": "95836",
-      "descripcion": "LISTERINE ENJ MENT PREM CUIDAD TOTAL 1LT"
-    },
-    {
-      "sku": "89334",
-      "descripcion": "P. DENT. COLGATE TOTAL 12 GUM 75ML"
-    },
-    {
-      "sku": "88294",
-      "descripcion": "CREMA COLGATE TARTAR 90GR"
-    },
-    {
-      "sku": "18959",
-      "descripcion": "COLGATE TOTAL ORIG MINT 97.5G"
-    },
-    {
-      "sku": "91874",
-      "descripcion": "P.DENTAL COLGATE TOTAL 12 CHARCOAL 75ML"
-    },
-    {
-      "sku": "45330",
-      "descripcion": "PACK COLGATE CEP.DENT.TWIS.FR.MED.2X1 2U"
-    },
-    {
-      "sku": "36782",
-      "descripcion": "PACK COLGATE CEP. DENT.TWIS.FR.SUA.2X12U"
-    },
-    {
-      "sku": "92958",
-      "descripcion": "ENJ BUCAL COLGATE PLAX ODOR CONTR.1000ML"
-    },
-    {
-      "sku": "95269",
-      "descripcion": "PEPSODENT PASTA WHITEN EXPERT GUM 100G"
-    },
-    {
-      "sku": "95300",
-      "descripcion": "PEPSODENT PASTA FRESH SENSIT EXPERT 100G"
-    },
-    {
-      "sku": "95301",
-      "descripcion": "PEPSODENT PASTA WHITE SENSIT EXPERT 100G"
-    },
-    {
-      "sku": "64466",
-      "descripcion": "DES. REXONA CLINICAL SOFT SOLID MEN 48GR"
-    },
-    {
-      "sku": "64467",
-      "descripcion": "DES. REXONA CLINICAL SOFT SOLI WOMEN 48G"
-    },
-    {
-      "sku": "73000",
-      "descripcion": "DES. REX.CLINIC.SOFT C.FRESH WOMEN 48GR"
-    },
-    {
-      "sku": "82426",
-      "descripcion": "DES.CRM. REXONA CLINICAL STRESS CONT.48G"
-    },
-    {
-      "sku": "76161001",
-      "descripcion": "DES.BARR.REXONA CLINIC.48G, SPORT ST.MEN"
-    },
-    {
-      "sku": "76162001",
-      "descripcion": "DES.BARR.REXONA CLINIC 48GR, XT.DRY WOM."
-    },
-    {
-      "sku": "92233",
-      "descripcion": "DEO SPRAY DOVE CLINICAL CARE 96H 150ML"
-    },
-    {
-      "sku": "92234",
-      "descripcion": "DEO SPRAY DOVE CLINICAL 96H 150ML"
-    },
-    {
-      "sku": "95607",
-      "descripcion": "DOVE SPRAY DES 96H PROTE ANTI TRAN 150ML"
-    },
-    {
-      "sku": "95805",
-      "descripcion": "ORALDENT PACK CEPILLO MEDIO"
-    },
-    {
-      "sku": "95792",
-      "descripcion": "ORALDENT ORALDENT PASTA JUNIOR 100GR"
-    },
-    {
-      "sku": "95711",
-      "descripcion": "PETRIZZIO HAIR CARE MASCAR REPAR 400GR"
-    },
-    {
-      "sku": "95712",
-      "descripcion": "PETRIZZIO HAIR CARE MASCAR ANTIFR 400GR"
-    },
-    {
-      "sku": "95730",
-      "descripcion": "PETRIZZ CREM PEINAR FOXY CUR RIZOS 300ML"
-    },
-    {
-      "sku": "95713",
-      "descripcion": "PETRIZZIO HAIR CARE MASCAR RIZOS 400GR"
-    },
-    {
-      "sku": "95714",
-      "descripcion": "PETRIZZIO HAIR CARE MASCAR MATIZAD 400GR"
-    },
-    {
-      "sku": "95732",
-      "descripcion": "PETRIZZ CREM PEINAR FRIZZ HIDRAT 300ML"
-    },
-    {
-      "sku": "50698",
-      "descripcion": "MAQ. AFEIT. GILLETE 3 DISP. 2 UNIDAD"
-    },
-    {
-      "sku": "16546",
-      "descripcion": "RPTO. MAQ. MACH-3 4UNID"
-    },
-    {
-      "sku": "85477",
-      "descripcion": "RPTO. MAQ. GILLETTE MACH 3 6UN"
-    },
-    {
-      "sku": "67738",
-      "descripcion": "MACH3 GILLETTE HERCULES"
-    },
-    {
-      "sku": "69901",
-      "descripcion": "RPTO. MAQ. MACH 3 SENSITIVE 4 UN."
-    },
-    {
-      "sku": "92030",
-      "descripcion": "RPTO. GILLETTE MACH3 CHARCOAL CART 4 UN"
-    },
-    {
-      "sku": "79731",
-      "descripcion": "MAQ.GILLETTE PRESTOBARBA 3 8 X 7 8UN."
-    },
-    {
-      "sku": "93524",
-      "descripcion": "REPUESTO MACH3 SENSITIVE 6 UNIDADES"
-    },
-    {
-      "sku": "93457",
-      "descripcion": "REP. GILLETTE M3 CARBONO 6 UN"
-    },
-    {
-      "sku": "92830",
-      "descripcion": "DEO GEL SECRET AP PHBAL LAVENDER 45G"
-    },
-    {
-      "sku": "94791",
-      "descripcion": "DEO SECRET CLEAR GEL VANILLA 45G"
-    },
-    {
-      "sku": "96483",
-      "descripcion": "SECRET DES GEL CLEAR CHERRYBLSM 45G"
-    },
-    {
-      "sku": "93179",
-      "descripcion": "CEP.DENTAL ORAL B COMPLETE BASE BLACK 4U"
-    },
-    {
-      "sku": "20755",
-      "descripcion": "CINTA DENT. ORAL-B SATINT C/C 25M 1 UNID"
-    },
-    {
-      "sku": "90644",
-      "descripcion": "CEPILLO ELEC. VITALITY KIDS SPIDERMAN OB"
-    },
-    {
-      "sku": "71903",
-      "descripcion": "CEP. DENT.ORAL B ELECT.VITALITY"
-    },
-    {
-      "sku": "94595",
-      "descripcion": "CEPILLO ELECTRICO VITALITY KIDS FROZEN"
-    },
-    {
-      "sku": "95547",
-      "descripcion": "ORAL B CEPILLO ELECTRICO IO SERIES 2 1UN"
-    },
-    {
-      "sku": "32364003",
-      "descripcion": "SHAMP.HEAD&SHOULD.375ML, LIMP.RENOV."
-    },
-    {
-      "sku": "93273",
-      "descripcion": "SHAMP HEAD&SHOULDERS ANTI-COMEZÓN 375ML"
-    },
-    {
-      "sku": "93473",
-      "descripcion": "CRM PEINAR PANTENE KERATINA 300ML"
-    },
-    {
-      "sku": "93449",
-      "descripcion": "ACONDICIONADOR PANTENE KERATINA 250ML"
-    },
-    {
-      "sku": "93317",
-      "descripcion": "SHAMPOO PANTENE KERATINA 300ML"
-    },
-    {
-      "sku": "91509",
-      "descripcion": "SHAMP.HERBAL ESS CLASSIC SHINE 865ML"
-    },
-    {
-      "sku": "93633",
-      "descripcion": "ACOND HERBAL ESS CLASSIC SHINE 865ML"
-    },
-    {
-      "sku": "92124",
-      "descripcion": "SHAMPOO HERBAL ESSENCES ROSE HIPS 865ML"
-    },
-    {
-      "sku": "93634",
-      "descripcion": "ACOND HERBAL ESSENCES ROSE HIPS 865ML"
-    },
-    {
-      "sku": "96666",
-      "descripcion": "DAZZ SELLADOR DE PUNTAS 125ML"
-    },
-    {
-      "sku": "96686",
-      "descripcion": "BALL SPRAY LARGO INCREI FCO 200ML"
-    },
-    {
-      "sku": "96687",
-      "descripcion": "BALL JABON CREMA PIEL SENSIBLE 450ML"
-    },
-    {
-      "sku": "95447",
-      "descripcion": "GIRLS WITH CURLS GELEE RIZOS 340ML"
-    },
-    {
-      "sku": "95449",
-      "descripcion": "GIRLS WITH CURLS MOUSSE RIZOS 200ML"
-    },
-    {
-      "sku": "87958",
-      "descripcion": "ALCOHOL GEL 70% SIMOND S SIN ENJUAG 75ML"
-    },
-    {
-      "sku": "92037",
-      "descripcion": "CRM EUCERIN CONTOR.OJOS ANTIPIGMENT 15ML"
-    },
-    {
-      "sku": "91605",
-      "descripcion": "PROT.SOLAR EUCERIN HYDROFLUID FPS50 50ML"
-    },
-    {
-      "sku": "79924",
-      "descripcion": "PROT. SOL.EUCERIN CRM.SECO FAC F50 50ML"
-    },
-    {
-      "sku": "94930",
-      "descripcion": "VALENTTE BOMBONES 150GR"
-    },
-    {
-      "sku": "95748",
-      "descripcion": "BATON CHOC. LECHE 16G"
-    },
-    {
-      "sku": "94561",
-      "descripcion": "GELLATTI LONCH MIX"
-    },
-    {
-      "sku": "94702",
-      "descripcion": "GELATTI SET COLLETS STITCH 3UN"
-    },
-    {
-      "sku": "94703",
-      "descripcion": "GELATTI DISNEY CINTILLO STITCH 1UN"
-    },
-    {
-      "sku": "94704",
-      "descripcion": "GELATTI CEP DESENR STITCH 1UN"
-    },
-    {
-      "sku": "94582",
-      "descripcion": "CEPILLO TANGLE TEEZER BUTTERCUP YELLOW"
-    },
-    {
-      "sku": "95817",
-      "descripcion": "SUNWORK DAILY GEL 60 G"
-    },
-    {
-      "sku": "95818",
-      "descripcion": "SUNWORK DAILY GEL 120 G"
-    },
-    {
-      "sku": "95819",
-      "descripcion": "SUNWORK DAILY GEL 190 G"
-    },
-    {
-      "sku": "93447",
-      "descripcion": "PROT FUSI.WATER MAGIC REPAIR COLOR SPF50"
-    },
-    {
-      "sku": "93672",
-      "descripcion": "FUSI.WATER ISDIN MAGIC REPAIR SPF50 50ML"
-    },
-    {
-      "sku": "23",
+      "sku": "3282779003124",
       "descripcion": "AGUA TERMAL AVENE SPR. FCO. 150ML."
     },
     {
-      "sku": "91902",
-      "descripcion": "TULOX INFANTIL 28MG/5ML JBE 100ML"
+      "sku": "3282770207774",
+      "descripcion": "GEL AVENE LIMP.CLEANANCE 400ML"
     },
     {
-      "sku": "91903",
-      "descripcion": "TULOX ADULTO 50MG/5ML JBE 100ML"
+      "sku": "3337871331290",
+      "descripcion": "SHAMP. DERCOS VICHY ANTICAS. GRASA 390ML"
     },
     {
-      "sku": "47395",
-      "descripcion": "TOCALM 30MG/5ML. JBE. FCO. 100 ML. AD."
+      "sku": "8429420248977",
+      "descripcion": "PROTECTOR FUSION WATER MAGIC SPF50 50ML"
     },
     {
-      "sku": "64703",
-      "descripcion": "BROPAVOL 8MG/5 ML FCO. 100ML."
+      "sku": "7804625952002",
+      "descripcion": "UREACER CREMA GEL ROSTRO 60 ML"
     },
     {
-      "sku": "85868",
-      "descripcion": "TAPSIN DN DIA 12 CAP+NOCHE 6 COMP."
+      "sku": "8429420200678",
+      "descripcion": "SRM. ISDINCEUTICS HYALURONIC CONCN 30ML"
     },
     {
-      "sku": "93567",
-      "descripcion": "BUCOGERM TOS 10 COMPRIMIDOS MASTICABLES"
-    },
-    {
-      "sku": "88628",
-      "descripcion": "GASTROALIV 240ML"
-    },
-    {
-      "sku": "84822",
-      "descripcion": "ENTEROL S 10 SACHET 250MG"
-    },
-    {
-      "sku": "25567",
-      "descripcion": "DISFRUTA PLV. EF. SOBR. 5 GR"
-    },
-    {
-      "sku": "46713",
-      "descripcion": "BEVITEX 5MG/ML. GTS. FCO. 20ML."
-    },
-    {
-      "sku": "46714",
-      "descripcion": "BEVITEX FORTE 10MG/ML. GTS. FCO. 20ML."
-    },
-    {
-      "sku": "83940",
-      "descripcion": "BEVITEX COMPUESTO 30ML"
-    },
-    {
-      "sku": "15414",
-      "descripcion": "KITADOL 500MG. CAJA 24 COMP."
-    },
-    {
-      "sku": "89070",
-      "descripcion": "TAPSIN 1G EFERVESCENTE X 20 SOBRES"
-    },
-    {
-      "sku": "39823",
-      "descripcion": "TAPSIN 160 MG. CAJA 16 COMP. INF."
-    },
-    {
-      "sku": "65476",
-      "descripcion": "TAPSIN MUJER 12 COMPRIMIDOS"
-    },
-    {
-      "sku": "65341",
-      "descripcion": "DICLAC 1,16% GEL POMO 60G"
-    },
-    {
-      "sku": "94488",
-      "descripcion": "NATUVIT VITAMINA C 100MG X 100 C"
-    },
-    {
-      "sku": "94489",
-      "descripcion": "NATUVIT VITAMINA C 500MG X 32C"
-    },
-    {
-      "sku": "94953",
-      "descripcion": "VITADAY ZINC 15 MG 60 TABLETAS"
-    },
-    {
-      "sku": "94951",
-      "descripcion": "VITADAY VITAMINA C 1000 MG 60 TABLETAS"
-    },
-    {
-      "sku": "96823",
-      "descripcion": "VIT C 1000 MG NARANJA X 20"
-    },
-    {
-      "sku": "96824",
-      "descripcion": "VIT C 1000 BERR X 20"
-    },
-    {
-      "sku": "94419",
-      "descripcion": "NATUVIT VITAMINA C 1000 MG 30 CAPSULAS"
-    },
-    {
-      "sku": "94425",
-      "descripcion": "NATUVIT VITAMINA E 1000 UI 60 CﾁPSULAS"
-    },
-    {
-      "sku": "91603",
-      "descripcion": "NEUROBIONTA ADVANCE 30 COMP REC"
-    },
-    {
-      "sku": "96822",
-      "descripcion": "VIT C+ZINC+D3 TRIPLE GE 20"
-    },
-    {
-      "sku": "81110",
-      "descripcion": "CENTRUM HOMBRE 30COMP.REC."
-    },
-    {
-      "sku": "81111",
-      "descripcion": "CENTRUM MUJER 30COMP.REC."
-    },
-    {
-      "sku": "96479",
-      "descripcion": "SUPRADYN 30 COMP RECUB"
-    },
-    {
-      "sku": "94960",
-      "descripcion": "VITADAY CALCIO+D (600 MG /400 UI) 60 TAB"
-    },
-    {
-      "sku": "95140",
-      "descripcion": "VITADAY CALCIO + D 500 MG 800 UI 60CAPS"
-    },
-    {
-      "sku": "96492",
-      "descripcion": "NATURES TRIPLE MAGNESIO 100 CAPS"
-    },
-    {
-      "sku": "90031",
-      "descripcion": "BEBIDA ELECTROLIT HIDRAT. FRUTILLA 625ML"
-    },
-    {
-      "sku": "90033",
-      "descripcion": "BEBIDA ELECTROLIT HIDRAT. NARANJA 625ML"
-    },
-    {
-      "sku": "90034",
-      "descripcion": "BEBIDA ELECTROLIT HIDRAT.FRUT-KIWI 625ML"
-    },
-    {
-      "sku": "92254",
-      "descripcion": "ELECTROLIT SABOR BLUE RASPBERRY 625 ML"
-    },
-    {
-      "sku": "93546",
-      "descripcion": "ELECTROLIT ZERO LIMA/LIMON C/625ML"
-    },
-    {
-      "sku": "93547",
-      "descripcion": "ELECTROLIT ZERO PONCHE DE FRUTAS C/625ML"
-    },
-    {
-      "sku": "96435",
-      "descripcion": "SUEROX POLVO ARANDANO POMELO 20G X1"
-    },
-    {
-      "sku": "96340",
-      "descripcion": "AMAZING CARE BERRIES STICKS 6G"
-    },
-    {
-      "sku": "93550",
-      "descripcion": "AMAZING CARE BERRIES STICKS 72 GR"
-    },
-    {
-      "sku": "96339",
-      "descripcion": "AMAZING CARE LIMONADA STICKS 6G"
-    },
-    {
-      "sku": "93549",
-      "descripcion": "AMAZING CARE LIMONADA STICKS 72 GR"
-    },
-    {
-      "sku": "96342",
-      "descripcion": "AMAZING CARE MARACUYA STICKS 6G"
-    },
-    {
-      "sku": "93552",
-      "descripcion": "AMAZING CARE MARACUYA STICKS 72 GR"
-    },
-    {
-      "sku": "96341",
-      "descripcion": "AMAZING CARE NARANJA STICK 6G"
-    },
-    {
-      "sku": "93551",
-      "descripcion": "AMAZING CARE NARANJA STICKS 72 GR"
-    },
-    {
-      "sku": "94678",
-      "descripcion": "NATUVIT MELENA DE LEON 60 CAP"
-    },
-    {
-      "sku": "94961",
-      "descripcion": "VITADAY COLﾁGENO 500 MG 60 CﾁPSULAS"
-    },
-    {
-      "sku": "94406",
-      "descripcion": "NATUVIT COLﾁGENO 1000 MG +Q10 15MG 30CAP"
-    },
-    {
-      "sku": "90437",
-      "descripcion": "ARTROSOME C+D 10.000MG X 30 SACHET"
-    },
-    {
-      "sku": "93516",
-      "descripcion": "MY OMEGA RED 60 CAPSULAS BLANDAS"
-    },
-    {
-      "sku": "94926",
-      "descripcion": "VITADAY FISH OIL 1000 MG 100 CAPSULAS"
-    },
-    {
-      "sku": "94973",
-      "descripcion": "VITADAY OMEGA 3-6-9 100 CAP BLAN"
-    },
-    {
-      "sku": "95060",
-      "descripcion": "VITADAY GINSENG COREANO+JALEA REAL 60CAP"
-    },
-    {
-      "sku": "94928",
-      "descripcion": "VITADAY MULTI MEN 60 TABLETAS"
-    },
-    {
-      "sku": "94929",
-      "descripcion": "VITADAY MULTI SILVER 60 TABLETAS"
-    },
-    {
-      "sku": "49014",
-      "descripcion": "NATUVIT CARAMELO PROPOLEO 10UN."
-    },
-    {
-      "sku": "95070",
-      "descripcion": "VITADAY VITAMINA D 800 UI 60CAPS"
-    },
-    {
-      "sku": "91349",
-      "descripcion": "ACTIVESURE SABOR CHOCOLATE 850 GR"
-    },
-    {
-      "sku": "91372",
-      "descripcion": "ACTIVESURE SABOR FRUTILLA 850 GR"
-    },
-    {
-      "sku": "91351",
-      "descripcion": "ACTIVESURE SABOR VAINILLA 850 GR"
-    },
-    {
-      "sku": "96636",
-      "descripcion": "NATUVIT FIBRA CON CACAO 300 GR"
-    },
-    {
-      "sku": "93565",
-      "descripcion": "PROTEIN CRUNCHY 40% BAR CHOCOLATE 65 GR"
-    },
-    {
-      "sku": "93566",
-      "descripcion": "PROTEIN CRUNCHY BAR CREAM 40% STRAW 65G"
-    },
-    {
-      "sku": "81748",
-      "descripcion": "DIAVITAL CAJA 60 COMP."
-    },
-    {
-      "sku": "92897",
-      "descripcion": "LIRIS SOLUCIﾓN OFTﾁLMICA 10ML"
-    },
-    {
-      "sku": "82109",
-      "descripcion": "VIBIEN 0,012MG./ML.SOL.OFT. 15ML."
-    },
-    {
-      "sku": "49705",
-      "descripcion": "POCKET GEL NEXCARE SIN ENJUAGE 60 ML"
-    },
-    {
-      "sku": "80968",
-      "descripcion": "CLEARBLUE PLUS PREGNANCY TEST 1UN."
-    },
-    {
-      "sku": "90268",
-      "descripcion": "BANDITA MAXIMA DURACION SURTIDAS 12 UND"
-    },
-    {
-      "sku": "95885",
-      "descripcion": "NEXCARE CINTA MICROPOROSA 2.4CMX9.1M"
-    },
-    {
-      "sku": "48962",
-      "descripcion": "COMPRESAS NEXCARE MINI FRIO/CALOR 2UN."
-    },
-    {
-      "sku": "95520",
-      "descripcion": "DOLORUB PARCHE DE COBRE 2UN"
-    },
-    {
-      "sku": "95625",
-      "descripcion": "PREDUAL WOMAN PATCH PARCHE 3UN"
-    },
-    {
-      "sku": "94654",
-      "descripcion": "NATUVIT DIGESTION PAPAYA ENZIMAS 60 CAP"
-    },
-    {
-      "sku": "96620",
-      "descripcion": "NATUVIT TRIPTOFANO B2+B6+B12+MAGN 60 CAP"
-    },
-    {
-      "sku": "96579",
-      "descripcion": "NAT VIT CALM MAGNESIO SIN SAB POLVO 113G"
-    },
-    {
-      "sku": "96580",
-      "descripcion": "NTR VIT CALM MAGN FRAM LIM POLVO 113G"
-    },
-    {
-      "sku": "70669",
-      "descripcion": "KALOBA CAJA 15 COMP. REC."
-    },
-    {
-      "sku": "70847",
-      "descripcion": "KALOBA GOTAS 50ML."
-    },
-    {
-      "sku": "69105",
-      "descripcion": "HIEDRIX 35MG./5ML. JBE. FCO.100ML."
-    },
-    {
-      "sku": "75523",
-      "descripcion": "FIBRASOL PLV.FCO.200 GR."
-    },
-    {
-      "sku": "74369",
-      "descripcion": "NATUVIT PROPOLEO MIEL Y PALTA SPR 30ML."
-    },
-    {
-      "sku": "70457",
-      "descripcion": "NATUVIT PROPOLEO SPRAY FCO. 30ML."
-    },
-    {
-      "sku": "74397",
-      "descripcion": "NATUVIT CARAMELO MENTOL 10UN."
-    },
-    {
-      "sku": "94417",
-      "descripcion": "NATUVIT CRANBERRY 7500 MG 30 CAPSULAS"
-    },
-    {
-      "sku": "95063",
-      "descripcion": "VITADAY CRANBERRY 15000 MG 60 CAPS"
-    },
-    {
-      "sku": "87930",
-      "descripcion": "RM. GLICERINA 200CC."
-    },
-    {
-      "sku": "92915",
-      "descripcion": "FISIORUB GEL ARNICA 60 GR"
-    },
-    {
-      "sku": "93692",
-      "descripcion": "AZANA PREBIOTIC FIBRA DE MANZANA 225G"
-    },
-    {
-      "sku": "91343",
-      "descripcion": "COLAGENO PLUS 384G 30 SACHET"
-    },
-    {
-      "sku": "91516",
-      "descripcion": "MOKIT OFF 50 ML SOLUCIﾓN NASAL 0,9%"
-    },
-    {
-      "sku": "91514",
-      "descripcion": "MOKIT OFF KIDS 50 ML SOLUCIﾓN NASAL 0,9%"
-    },
-    {
-      "sku": "90903",
-      "descripcion": "GASTROALIV MASTICABLES 10UN."
-    },
-    {
-      "sku": "93410",
-      "descripcion": "QG BIOTICS FLORA X30 CﾁPSULAS"
-    },
-    {
-      "sku": "79120",
-      "descripcion": "MENTHOLATUM UGTO. LATA 12 GR."
-    },
-    {
-      "sku": "93680",
-      "descripcion": "TOA.PLENITUD DIA Y NOCHE 20 UNIDADES"
-    },
-    {
-      "sku": "68121",
+      "sku": "4005800223136",
       "descripcion": "CRM. AQUAPHOR EUCERIN POMO 55ML."
     },
     {
-      "sku": "95529",
-      "descripcion": "ECODENTA PD BLACK ORANGE BLANQU 100ML"
+      "sku": "3661434002687",
+      "descripcion": "GENTLE D ROLL-ON 50ML URI BODY HYG 50ML"
     },
     {
-      "sku": "95530",
-      "descripcion": "ECODENTA PD ORGAN KIDS JUEG DE FRUT 75ML"
+      "sku": "3282770153477",
+      "descripcion": "DARROW ACTI GEL LIM 140 G"
     },
     {
-      "sku": "95531",
-      "descripcion": "ECODENTA PD ORGANICA ANTIPLACA COCO 75ML"
+      "sku": "3282770400786",
+      "descripcion": "DUCRAY KELUAL DS SHAMPOO INTENSIVE 100ML"
     },
     {
-      "sku": "96842",
-      "descripcion": "GUM FLOSSER ORIGINAL 40UN"
+      "sku": "799192431593",
+      "descripcion": "SET LIMA FARMACIAS AHUMADA 3 UN"
     },
     {
-      "sku": "96892",
-      "descripcion": "GUM CEPILLO INTERDENTAL ROJO 0.8 MM 4 UN"
+      "sku": "8934839135584",
+      "descripcion": "PEPSODENT PASTA FRESH SENSIT EXPERT 100G"
     },
     {
-      "sku": "96891",
-      "descripcion": "GUM KIT DE ORTODONCIA"
+      "sku": "8934839135614",
+      "descripcion": "PEPSODENT PASTA WHITEN EXPERT GUM 100G"
     },
     {
-      "sku": "73888",
-      "descripcion": "MAQ. AFEIT.DES.GILLETTE SIMPLY VENUS3 2U"
+      "sku": "7804907988965",
+      "descripcion": "CREMA MANOS PIELARMINA CASTA?A 70 GR"
     },
     {
-      "sku": "92270",
+      "sku": "7804907981539",
+      "descripcion": "CRM MANOS PIELARMINA COLAGENO 70 GR"
+    },
+    {
+      "sku": "7500435182201",
       "descripcion": "CEP. DENT ORAL B ICONIC 3UN"
     },
     {
-      "sku": "96923",
-      "descripcion": "SET 2UN SCRUNCHIES SNOOPY"
+      "sku": "7896009498794",
+      "descripcion": "P.DENTAL SENSODY.COMPLETA ANTI SARRO 49G"
     },
     {
-      "sku": "72174",
-      "descripcion": "TALCO FITTIG COBRE SPR. AEROS FCO 100GR."
+      "sku": "7798140259381",
+      "descripcion": "CRM. CICATRICURE GOLD LIFT DIA 50GR"
     },
     {
-      "sku": "94249",
-      "descripcion": "PHILIPS DEPIL ELEC SAT ESS/CABEZAL MAS"
+      "sku": "7500435203975",
+      "descripcion": "MAQ. AFEIT.DES.GILLETTE VENUS INTIMA 2UN"
     },
     {
-      "sku": "94380",
-      "descripcion": "PROT SOL NIVEA SUN INVISIBLE SPF50 40ML"
+      "sku": "7506339315899",
+      "descripcion": "RPTO. MAQ GILLETTE VENUS BREEZE 2 UN."
     },
     {
-      "sku": "86110",
-      "descripcion": "PROT SOL HAWAIAN ISLAND SPORT FPS50 180"
+      "sku": "3337875597388",
+      "descripcion": "CRM CERAVE HIDRATANTE POTE 454ML."
     },
     {
-      "sku": "83819",
-      "descripcion": "PROT SOL BANANA DRY BAL SPO.FPS 50+170ML"
+      "sku": "5056683103236",
+      "descripcion": "SHAMPOO SECO ORIG BRUSHWORKS 50ML"
     },
     {
-      "sku": "77934",
-      "descripcion": "PROT. SOL.RAYITO DE SOLFPS50 OZONO 190G"
+      "sku": "4006000013626",
+      "descripcion": "SERUM NIVEA EXPERT LIFT 30ML"
     },
     {
-      "sku": "88684",
-      "descripcion": "PROT SOL CRM/POMO 1 SIMONDS SPF50 190ML"
+      "sku": "30142442",
+      "descripcion": "DEL OJOS LIQ MAYBELLINE MASTE INK WP 4ML"
     },
     {
-      "sku": "85666",
-      "descripcion": "PROT SOL SIMONDSFPS50 GATILLO 100ML"
+      "sku": "8411135353770",
+      "descripcion": "LACTOUREA DESODORANTE ROLL ON 50ML"
     },
     {
-      "sku": "95320",
-      "descripcion": "SIMONDS KIDS SHAMPOO SUAV Y BRILLO 750ML"
+      "sku": "4006000043838",
+      "descripcion": "DES STICK NIVEA FEM DERMA CONTROL 50ML"
     },
     {
-      "sku": "95322",
-      "descripcion": "SIMONDS KIDS ACONDIC SUAV Y BRILLO 750ML"
+      "sku": "7800004000722",
+      "descripcion": "ORAL F ENJ BUCAL KIDS 250ML"
     },
     {
-      "sku": "95633",
-      "descripcion": "SIMONDS SERUM CAPILAR KERAPLEX 130ML"
+      "sku": "7861073971030",
+      "descripcion": "NF HIPOGLOS POMADA 20G"
     },
     {
-      "sku": "95572",
-      "descripcion": "SIMONDS OLEO COMPLEX NUTRI ARGAN 130ML"
+      "sku": "7500435247139",
+      "descripcion": "REP. GILLETTE M3 CARBONO 6 UN"
     },
     {
-      "sku": "96038",
-      "descripcion": "PHILIPS DEPIL ELEC SAT ESS/CABEZAL MAS"
+      "sku": "7506306254374",
+      "descripcion": "DOVE SPRAY DES 96H PROTE ANTI TRAN 150ML"
     },
     {
-      "sku": "96459",
-      "descripcion": "MOMERIA 60 COMPRIMIDOS"
+      "sku": "7804918451649",
+      "descripcion": "COPA MENSTRUAL BENTLEY TALLA S 1UN"
     },
     {
-      "sku": "90529",
-      "descripcion": "FLEX FULL 1,16% X 35 G GEL EFECTO ANALG."
+      "sku": "7509546654034",
+      "descripcion": "CREMA COLGATE TARTAR 90GR"
     },
     {
-      "sku": "89096",
-      "descripcion": "X-RAY COLﾁGENO EN COMPRIMIDOS X 60"
+      "sku": "99176480310",
+      "descripcion": "COLGATE TOTAL ORIG MINT 97.5G"
+    },
+    {
+      "sku": "7804945011441",
+      "descripcion": "ALCOHOL GEL 70% SIMOND S SIN ENJUAG 75ML"
+    },
+    {
+      "sku": "799192420504",
+      "descripcion": "SET 2 COLLET BACK TO SCHOOL"
+    },
+    {
+      "sku": "3600531465247",
+      "descripcion": "CORREC.OJOS ERASER MAYB. 6ML, 07 SAND"
+    },
+    {
+      "sku": "6902395970071",
+      "descripcion": "BASE MAYBELLINE SUPERSTAY LUMI MATTE 120"
+    },
+    {
+      "sku": "30146815",
+      "descripcion": "LABIAL MNY TEDDY TINT 55 KNEEHIGH NU"
+    },
+    {
+      "sku": "799192431555",
+      "descripcion": "PACK DE PINZAS OBLICUA/RECTA F. AHUMADA"
+    },
+    {
+      "sku": "75486088163",
+      "descripcion": "HAWAIIAN TROPIC FACIAL PA FPS50 60ML"
+    },
+    {
+      "sku": "7891150103504",
+      "descripcion": "DOVE OLEO UV REPAIR FPC70 110ML"
+    },
+    {
+      "sku": "799192431487",
+      "descripcion": "PACK CORTAUNA GRANDE + CORTAUNA CHICO"
+    },
+    {
+      "sku": "7509552904819",
+      "descripcion": "TRAT. CAP.ELVIVE EXTRAORD.OIL 100ML."
+    },
+    {
+      "sku": "3600523817481",
+      "descripcion": "SERUM ELVIVE DREAM LONG 100ML"
+    },
+    {
+      "sku": "7804637360482",
+      "descripcion": "OMEGA UP ULTRAPURE 150 CAPSULAS"
+    },
+    {
+      "sku": "2000000746753",
+      "descripcion": "RM. ALCOHOL 70% 500 ML"
+    },
+    {
+      "sku": "7702098041776",
+      "descripcion": "NEXCARE MASCARILLA DESECHABLE 12UN"
+    },
+    {
+      "sku": "7800004399536",
+      "descripcion": "TAPSIN COMPT. DIA PLV. SOBR. 5 GR."
+    },
+    {
+      "sku": "7793640992677",
+      "descripcion": "BEPANTHOL REGENERADORA 30GR."
+    },
+    {
+      "sku": "7800004508594",
+      "descripcion": "DOLORUB 5% CREMA POMO 45GR."
+    },
+    {
+      "sku": "705928050754",
+      "descripcion": "NASAMIST ISOTONICO SPRAY 75 ML."
+    },
+    {
+      "sku": "7800004005932",
+      "descripcion": "FISIORUB GEL ARNICA 60 GR"
+    },
+    {
+      "sku": "7804671180664",
+      "descripcion": "VIT C 1000MG BERR GER ENER 20 TABL EFER"
+    },
+    {
+      "sku": "7800038000675",
+      "descripcion": "PYLOBIOTIC 30 CAPSULAS"
+    },
+    {
+      "sku": "793969066834",
+      "descripcion": "TERMOMETRO DIGITAL FLEXIBLE PEQUENO"
+    },
+    {
+      "sku": "7800004003884",
+      "descripcion": "GASTROALIV 240ML"
+    },
+    {
+      "sku": "7800046004979",
+      "descripcion": "GESIPROCT CREMA RECTAL X 30 GR"
+    },
+    {
+      "sku": "705928010079",
+      "descripcion": "INHALADOR SINUINHALER NEILMED 1UN"
+    },
+    {
+      "sku": "2000000755236",
+      "descripcion": "RM SODIO BICARBONATO 200 G"
+    },
+    {
+      "sku": "7800004002160",
+      "descripcion": "TAPSIN DN DIA 12 CAP+NOCHE 6 COMP."
+    },
+    {
+      "sku": "7804918500767",
+      "descripcion": "INFOR PRO KIDS PROBIOTICOS 30 COMP MAST"
+    },
+    {
+      "sku": "7800004006410",
+      "descripcion": "TAPSIN 160 MG. CAJA 16 COMP. INF."
+    },
+    {
+      "sku": "781584323258",
+      "descripcion": "VITADAY MULTI + PROBIOTICOS 60 CAPS"
+    },
+    {
+      "sku": "7800038042729",
+      "descripcion": "ENTEROL S 10 SACHET 250MG"
+    },
+    {
+      "sku": "7800004005130",
+      "descripcion": "PANCRIT MENTA FRESCA 10 COMPRIMIDOS"
+    },
+    {
+      "sku": "705928500754",
+      "descripcion": "PEDIAMIST SPRAY NASAL 75ML"
+    },
+    {
+      "sku": "7804900000817",
+      "descripcion": "CENTRUM MUJER 30COMP.REC."
+    },
+    {
+      "sku": "7804918452615",
+      "descripcion": "MOKIT OFF KIDS 50 ML SOLUCION NASAL 0,9%"
+    },
+    {
+      "sku": "2000000746630",
+      "descripcion": "RM. PASTA LASSAR X 500 G UNGUENTO"
+    },
+    {
+      "sku": "7804918451663",
+      "descripcion": "PRESERVATIVO SKYN ELITE 3UN"
+    },
+    {
+      "sku": "2000000727097",
+      "descripcion": "RM. PASTA LASSAR FCH 100 GR."
+    },
+    {
+      "sku": "2000000727073",
+      "descripcion": "RM. VASELINA LIQUIDA 200CC."
+    },
+    {
+      "sku": "7804620836222",
+      "descripcion": "VIBIEN 0,012MG./ML.SOL.OFT. 15ML."
+    },
+    {
+      "sku": "2000000742083",
+      "descripcion": "VITADAY VIT C EFERVESCENTE 1000MG 10UN"
+    },
+    {
+      "sku": "7800050003081",
+      "descripcion": "GESIDOL PARACETAMOL BIOE.1GR X 20COMP"
+    },
+    {
+      "sku": "7800004507825",
+      "descripcion": "TAPSIN MUJER 12 COMPRIMIDOS"
+    },
+    {
+      "sku": "7800044001321",
+      "descripcion": "SINFLU PARACETAMOL 500MG 20 COMPRIMIDOS"
+    },
+    {
+      "sku": "7800046005815",
+      "descripcion": "GESIDOL PARACETAMOL GOTAS 100MG/MLX15ML"
+    },
+    {
+      "sku": "7800068120114",
+      "descripcion": "VITDE 800 UI CAJA 30 COMP."
+    },
+    {
+      "sku": "781584323036",
+      "descripcion": "VITADAY FISH OIL 1000 MG 100 CAPSULAS"
+    },
+    {
+      "sku": "781584323043",
+      "descripcion": "VITADAY OMEGA 3-6-9 100 CAP BLAN"
+    },
+    {
+      "sku": "781584322909",
+      "descripcion": "VITADAY COLAGENO 500 MG 60 CAPSULAS"
+    },
+    {
+      "sku": "781584323180",
+      "descripcion": "VITADAY CRANBERRY 15000 MG 60 CAPS"
+    },
+    {
+      "sku": "7804629440581",
+      "descripcion": "INHALASYNT PEDIATRICA 350 ML"
+    },
+    {
+      "sku": "5425002406806",
+      "descripcion": "QNT CREATINA MONOHYDRATEDA 300 GR"
+    },
+    {
+      "sku": "659525128937",
+      "descripcion": "AZANA PREBIOTIC FIBRA DE MANZANA 384G"
+    },
+    {
+      "sku": "610985133565",
+      "descripcion": "NATUVIT FIBRA CON CACAO 300 GR"
+    },
+    {
+      "sku": "7500435120067",
+      "descripcion": "CLEARBLUE PLUS PREGNANCY TEST 1UN."
+    },
+    {
+      "sku": "2000000754994",
+      "descripcion": "NATUVIT VITAMINA C 100MG X 100 C"
+    },
+    {
+      "sku": "7809576419338",
+      "descripcion": "ACTIVESURE SABOR CHOCOLATE 850 GR"
+    },
+    {
+      "sku": "7800004007325",
+      "descripcion": "YES! HYDRATE LUBRICANTE 90ML"
+    },
+    {
+      "sku": "7501159731232",
+      "descripcion": "DUREX SENSITIVO DELGADO 3UN"
+    },
+    {
+      "sku": "183405000094",
+      "descripcion": "CALM MAGN FRAM LIM POLVO 113G"
+    },
+    {
+      "sku": "781584323074",
+      "descripcion": "VITADAY VITAMINA E 1000 UI 60 CAP BLAN"
+    },
+    {
+      "sku": "7805070002953",
+      "descripcion": "POCKET GEL NEXCARE SIN ENJUAGE 60 ML"
+    },
+    {
+      "sku": "7800046005822",
+      "descripcion": "GESIDOL PARACETAMOL JBE 120MG/5ML 100ML"
+    },
+    {
+      "sku": "781584322886",
+      "descripcion": "VITADAY VITAMINA C 1000 MG 60 TABLETAS"
+    },
+    {
+      "sku": "7800004001507",
+      "descripcion": "DIAVITAL CAJA 60 COMP."
+    },
+    {
+      "sku": "83078003647",
+      "descripcion": "BALSAMO LAB CARMEX CEREZA STICK 4,25 GR"
+    },
+    {
+      "sku": "83078004644",
+      "descripcion": "BALSAMO LAB CARMEX FRUTILLA TUBO 10GR"
+    },
+    {
+      "sku": "7509546052861",
+      "descripcion": "P. DENT. COLGATE TOTAL 12 GUM 75ML"
+    },
+    {
+      "sku": "7509546683799",
+      "descripcion": "P.DENTAL COLGATE TOTAL 12 CHARCOAL 75ML"
+    },
+    {
+      "sku": "7791293049625",
+      "descripcion": "DEO SPRAY DOVE CLINICAL CARE 96H 150ML"
+    },
+    {
+      "sku": "7791293049618",
+      "descripcion": "DEO SPRAY DOVE CLINICAL 96H 150ML"
+    },
+    {
+      "sku": "7896009498091",
+      "descripcion": "P. DENT SENSODYNE PROT. COMPL WHITE 90GR"
+    },
+    {
+      "sku": "7794640170720",
+      "descripcion": "P. DENT.SENSODYNE REP.&PROT.BLANQ.100GR"
+    },
+    {
+      "sku": "7896009499166",
+      "descripcion": "SENSODYNE CLINICAL REPAIR TP 100G"
+    },
+    {
+      "sku": "8934839135591",
+      "descripcion": "PEPSODENT PASTA WHITE SENSIT EXPERT 100G"
+    },
+    {
+      "sku": "7794640170133",
+      "descripcion": "P. DENT.SENSODYNE REPAR.& PROTEG.100GR."
+    },
+    {
+      "sku": "4210201826613",
+      "descripcion": "CEP. DENT. ELECT. ORAL B PRO SALUD 1 UN."
+    },
+    {
+      "sku": "7500435245814",
+      "descripcion": "PRESTO BARBA GILLETTE CARBON 8 UN"
+    },
+    {
+      "sku": "4006000043821",
+      "descripcion": "DES STICK NIVEA MASC DERMA CONTROL 50ML"
+    },
+    {
+      "sku": "7891024020210",
+      "descripcion": "CEPILLO DENTAL ELMEX ULTRA SOFT 2UN"
+    },
+    {
+      "sku": "7506339323184",
+      "descripcion": "RPTO. MAQ. GILLETTE MACH 3 6UN"
+    },
+    {
+      "sku": "7794640172731",
+      "descripcion": "CRM ADH DEN ULTRA COREGA MAX SELL SS 70G"
+    },
+    {
+      "sku": "7794640171741",
+      "descripcion": "COREGA ULTRA CREMA ADHES.SIN SABOR 40 GR"
+    },
+    {
+      "sku": "7800004000302",
+      "descripcion": "ENJ. BUC. ORAL FRESH MENTA FUERTE 250ML"
+    },
+    {
+      "sku": "7794640171703",
+      "descripcion": "COREGA ULTRA CREMA ADHESIVA MENTA 40 GR"
+    },
+    {
+      "sku": "7509546694986",
+      "descripcion": "COLGATE EXTR SUAVE PROCUIDADO CARBON 2UN"
+    },
+    {
+      "sku": "7509546690308",
+      "descripcion": "ELMEX PACK CEPILLO PF SENSITIVE"
+    },
+    {
+      "sku": "7509546699318",
+      "descripcion": "ELMEX PASTA DENTAL SENSIT WH PACK 220GR"
+    },
+    {
+      "sku": "7801620010737",
+      "descripcion": "CACHANTUN STRONG GAS 600ML"
+    },
+    {
+      "sku": "7707254792554",
+      "descripcion": "MAQ AFEITAR SCHICK PIEL SENSIBLE 4 UND"
+    },
+    {
+      "sku": "841058004547",
+      "descripcion": "ESP.AFEIT.SCHICK PROTECT SENSITIVE 200ML"
+    },
+    {
+      "sku": "8809126646107",
+      "descripcion": "CARESENS TIRAS GLUCOSA 50UND."
+    },
+    {
+      "sku": "739802462364",
+      "descripcion": "OXIMETRO SATUROMETRO DE PULSO SELFMINE"
+    },
+    {
+      "sku": "78026537",
+      "descripcion": "MENTHOLATUM UGTO. LATA 36 GR"
+    },
+    {
+      "sku": "7800004004126",
+      "descripcion": "TAPSIN 1G EFERVESCENTE X 20 SOBRES"
+    },
+    {
+      "sku": "7804918402153",
+      "descripcion": "TOCALM 30MG/5ML. JBE. FCO. 100 ML. AD."
+    },
+    {
+      "sku": "2000000632438",
+      "descripcion": "NATUVIT PROPOLEO SPRAY FCO. 30ML."
+    },
+    {
+      "sku": "7804671180282",
+      "descripcion": "VIT C+ZINC+D3 ACC TRIPLE GE 20 EFERV NAR"
+    },
+    {
+      "sku": "793969066520",
+      "descripcion": "NATUVIT VITAMINA C 1000 MG 30 CAPSULAS"
+    },
+    {
+      "sku": "793969066612",
+      "descripcion": "NATUVIT VITAMINA E 1000 UI 60 CAPSULAS"
+    },
+    {
+      "sku": "4987188509067",
+      "descripcion": "SALONPAS SOBR. 10 UNID."
+    },
+    {
+      "sku": "7804918401842",
+      "descripcion": "PRESERVATIVO LIFESTYLES SKIN 6UN."
+    },
+    {
+      "sku": "7800004001781",
+      "descripcion": "BIOFLORA 250MG. PLV 10 SOBRES"
+    },
+    {
+      "sku": "7800046004993",
+      "descripcion": "AFTAGEL BUCAL 20 GR"
+    },
+    {
+      "sku": "7804656850209",
+      "descripcion": "TERMOMETRO RECOVERY DIGITAL"
+    },
+    {
+      "sku": "5425002405014",
+      "descripcion": "ENERGEL 55 ML SABOR LIMON"
+    },
+    {
+      "sku": "7804918450178",
+      "descripcion": "PRESERVATIVO ROUGH RIDER CAJA 12UNID."
+    },
+    {
+      "sku": "7793640992691",
+      "descripcion": "REDOXON TRIPLE ACCION"
+    },
+    {
+      "sku": "5000158103689",
+      "descripcion": "STREPFEN MIEL Y LIMON X 8UN."
+    },
+    {
+      "sku": "2000000727011",
+      "descripcion": "RM. VASELINA SOLIDA 100GR"
+    },
+    {
+      "sku": "793969066766",
+      "descripcion": "NATUVIT MELENA DE LEON 60 CAP"
+    },
+    {
+      "sku": "7800004004874",
+      "descripcion": "GASTROALIV MASTICABLES 10UN."
+    },
+    {
+      "sku": "7800004001637",
+      "descripcion": "TAPSIN M 10COMP REC"
+    },
+    {
+      "sku": "5404017406858",
+      "descripcion": "PROTEIN CRUNCHY BAR CREAM 40% STRAW 65G"
+    },
+    {
+      "sku": "7804918450154",
+      "descripcion": "PRESERVATIVO NUDA CAJA 12 UNID."
+    },
+    {
+      "sku": "7800044000669",
+      "descripcion": "MANTECA DE CACAO S/FRUTILLA"
+    },
+    {
+      "sku": "7804900000794",
+      "descripcion": "CENTRUM HOMBRE 30COMP.REC."
+    },
+    {
+      "sku": "2000000742304",
+      "descripcion": "RM. GLICERINA 200CC."
+    },
+    {
+      "sku": "2000000755014",
+      "descripcion": "NATUVIT VITAMINA C 500MG X 32C"
+    },
+    {
+      "sku": "7800007771193",
+      "descripcion": "HIEDRIX 35MG./5ML. JBE. FCO.100ML."
+    },
+    {
+      "sku": "7800004261505",
+      "descripcion": "DISFRUTA PLV. EF. SOBR. 5 GR"
+    },
+    {
+      "sku": "7800004007196",
+      "descripcion": "DOLORUB PARCHE DE COBRE 2UN"
+    },
+    {
+      "sku": "7804918500835",
+      "descripcion": "INFOR PRO MULTIVITAMINICOS 30 COMP"
+    },
+    {
+      "sku": "7800046004887",
+      "descripcion": "BROPAVOL 8MG/5 ML FCO. 100ML."
+    },
+    {
+      "sku": "7800004399567",
+      "descripcion": "TAPSIN COMPT. NOCHE. PLV. SOBR. 5 GR"
+    },
+    {
+      "sku": "7702098004146",
+      "descripcion": "NEXCARE CINTA MICROPOROSA 2.4CMX9.1M"
+    },
+    {
+      "sku": "7809561400099",
+      "descripcion": "ENGYSTOL FCO. 50 COMP."
+    },
+    {
+      "sku": "793969066636",
+      "descripcion": "NATUVIT CRANBERRY 7500 MG 30 CAPSULAS"
+    },
+    {
+      "sku": "793969066759",
+      "descripcion": "NATUVIT DIGESTION PAPAYA ENZIMAS 60 CAP"
+    },
+    {
+      "sku": "7804676580483",
+      "descripcion": "AMAZING CARE BERRIES STICKS 6G"
+    },
+    {
+      "sku": "781584322916",
+      "descripcion": "VITADAY MAGNESIO CITRATO 400 MG 60 TAB"
+    },
+    {
+      "sku": "7800068011566",
+      "descripcion": "LUBRILIMP SOLUCION OFTALMICA FCO 15 ML"
+    },
+    {
+      "sku": "7800038042743",
+      "descripcion": "ENTEROL S 10 CAPSULAS 250MG"
+    },
+    {
+      "sku": "7800004348008",
+      "descripcion": "PROCTOGEL CRM. TUBO 30 GR."
+    },
+    {
+      "sku": "7800004006892",
+      "descripcion": "PREDUAL WOMAN PATCH PARCHE 3UN"
+    },
+    {
+      "sku": "7809591401806",
+      "descripcion": "XUMADOL 1 G X 20 COMP."
+    },
+    {
+      "sku": "7793640992790",
+      "descripcion": "SUPRADYN 30 COMP RECUB"
+    },
+    {
+      "sku": "7800059002412",
+      "descripcion": "VANTUX MAX 60 CAP"
+    },
+    {
+      "sku": "7800004000500",
+      "descripcion": "FIBRASOL PLV.FCO.200 GR."
+    },
+    {
+      "sku": "8906158550324",
+      "descripcion": "VITADAY CALCIO + D 500 MG 800 UI 60CAPS"
+    },
+    {
+      "sku": "7804656850001",
+      "descripcion": "RECOVERY K TAPE NEGRA 5M."
+    },
+    {
+      "sku": "781584321445",
+      "descripcion": "MAGNESIO 250MG 90 TAB"
+    },
+    {
+      "sku": "781584322961",
+      "descripcion": "VITADAY VITAMINA D 800 UI 60CAPS"
+    },
+    {
+      "sku": "781584323142",
+      "descripcion": "VITADAY TRIPLE MAGNESIO 60 CAPSULAS"
+    },
+    {
+      "sku": "7804918452936",
+      "descripcion": "GEL LUBRICANTE BENTLEY BLUEBERRY 50GR."
+    },
+    {
+      "sku": "736085217599",
+      "descripcion": "THRIVE HYFRESH 350ML"
+    },
+    {
+      "sku": "793969066599",
+      "descripcion": "NATUVIT COLAGENO 1000 MG +Q10 15MG 30CAP"
+    },
+    {
+      "sku": "7804918453247",
+      "descripcion": "INFOR PRO SPORT CREATINA MONOHIDRA 300GR"
+    },
+    {
+      "sku": "781584323104",
+      "descripcion": "VITADAY CALCIO+D (600 MG /400 UI) 60 TAB"
+    },
+    {
+      "sku": "781584322923",
+      "descripcion": "VITADAY ZINC 15 MG 60 TABLETAS"
+    },
+    {
+      "sku": "781584322947",
+      "descripcion": "VITADAY MULTI SILVER 60 TABLETAS"
+    },
+    {
+      "sku": "781584323128",
+      "descripcion": "VITADAY B-COMPLEX 100 TABLETAS"
+    },
+    {
+      "sku": "840093101525",
+      "descripcion": "NATURES TRIPLE MAGNESIO 100 CAPS"
+    },
+    {
+      "sku": "7804676580537",
+      "descripcion": "AMAZING CARE NARANJA STICKS 72 GR"
+    },
+    {
+      "sku": "799192726798",
+      "descripcion": "GLOW SET BRILLOS DE LABIOS 5UN"
+    },
+    {
+      "sku": "8411135352766",
+      "descripcion": "DESODORANTE SPRAY LACTOUREA 200 ML"
+    },
+    {
+      "sku": "8411135654792",
+      "descripcion": "CREMA CORPORAL LACTOUREA REPARADORA 1LT"
+    },
+    {
+      "sku": "8411135008113",
+      "descripcion": "JABON LIQ CRM LACTOUREA REPARADOR 700ML"
+    },
+    {
+      "sku": "8411135008137",
+      "descripcion": "JABON LIQ CRM LACTOUREA OLEO 700ML"
+    },
+    {
+      "sku": "8411135008120",
+      "descripcion": "JABON LIQ CRM LACTOUREA REAF 700ML"
+    },
+    {
+      "sku": "7500435259026",
+      "descripcion": "PANTENE RECONTR MOL MASCA INT DIAR 300ML"
+    },
+    {
+      "sku": "7500435259040",
+      "descripcion": "PANTENE CREMA PEINAR MOLEC BND REP 300ML"
+    },
+    {
+      "sku": "7500435258999",
+      "descripcion": "PTN CN REPAIR MOLECULAR 250ML"
+    },
+    {
+      "sku": "7500435258944",
+      "descripcion": "PTN SH REPAIR MOLECULAR 300ML"
+    },
+    {
+      "sku": "7800004006175",
+      "descripcion": "LECHUGA PACK CUERPO 350+MANOS"
+    },
+    {
+      "sku": "7804651938742",
+      "descripcion": "PACK TEATRICAL ANTI + ACLAR + HUMEC 100G"
+    },
+    {
+      "sku": "7804651939381",
+      "descripcion": "PACK CICATR NEUROZEN CRM + SER NEUROZEN"
+    },
+    {
+      "sku": "7804907938663",
+      "descripcion": "PETRIZZ EST HIDRASHOCK DIA+NOCHE"
+    },
+    {
+      "sku": "4006000291840",
+      "descripcion": "PACK NIVEA DDM26 P SECA 50ML+NOCHE 50ML"
+    },
+    {
+      "sku": "7896007552740",
+      "descripcion": "TOA.PLENITUD DIA Y NOCHE 20 UNIDADES"
+    },
+    {
+      "sku": "7809604031631",
+      "descripcion": "KOTEX TOALLA NOCT LARGA EXTRA PROTEC 6UN"
+    },
+    {
+      "sku": "7702027435607",
+      "descripcion": "TAMPONES NOSOTRAS C/APLICADOR SUPER X 8"
+    },
+    {
+      "sku": "7804641331393",
+      "descripcion": "TOALLAS FEMENINAS BIO NOCTURNAS 10UN"
+    },
+    {
+      "sku": "2000000689661",
+      "descripcion": "PACK DISCO DESMAQ. OPTIONS 2 X 80UN."
+    },
+    {
+      "sku": "799192726774",
+      "descripcion": "PANUELO DESECHTRIP HOJA PACK 18 PAQ 10UN"
     }
   ],
-  "lastUpdated": "2026-03-23T19:46:39.701Z",
+  "lastUpdated": "2026-04-27T13:32:42.010Z",
   "source": {
-    "fileName": "Listado PAI Marzo.xlsx",
-    "sheet": "PAI",
-    "skuCol": "SKU",
+    "fileName": "Acrilicos pai Mayo.xlsx",
+    "sheet": "PAI MAYO",
+    "skuCol": "UPC",
     "descCol": "DESCRIPCION",
-    "excelRows": 295
+    "excelRows": 209
   }
 }
