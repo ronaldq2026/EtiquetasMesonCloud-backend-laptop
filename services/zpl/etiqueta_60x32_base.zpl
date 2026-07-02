@@ -5,38 +5,36 @@
 ^PW480
 ^LL248
 ^LH0,0
-^LT0
-^LS0
 
 ^PR2
 ~SD25
 
 ^FX ============================
-^FX PRODUCTO (2 líneas)
+^FX PRODUCTO
 ^FX ============================
-^FT140,44
-^A0N,24,24
-^FB300,2,0,C
+^FT40,40
+^A0N,20,20
+^FB440,2,0,C
 ^FD{PRODUCTO}^FS
 
 ^FX ============================
 ^FX PRECIO NORMAL
 ^FX ============================
-^FT140,66
-^A0N,14,14
-^FB300,1,0,C
+^FT60,54
+^A0N,20,20
+^FB400,1,0,C
 ^FDPRECIO NORMAL: {PRECIO_NORMAL}^FS
 
 ^FX ============================
-^FX PRECIO PRINCIPAL
+^FX PRECIO OFERTA (MAS GRANDE)
 ^FX ============================
-^FT140,128
-^A0N,70,50
-^FB300,1,0,C
+^FT60,135
+^A0N,90,65
+^FB400,1,0,C
 ^FD{PRECIO}^FS
 
 ^FX ============================
-^FX PRECIO UNITARIO (SIN CAMBIO)
+^FX PRECIO UNITARIO
 ^FX ============================
 ^FT20,138
 ^A0N,18,18
@@ -50,28 +48,28 @@
 ^FX CODIGO DE BARRAS
 ^FX ============================
 ^BY1,2,42
-^FT215,172
+^FT145,172
 ^BCN,32,N,N,N
 ^FD{EAN13}^FS
 
-^FT215,188
+^FT120,188
 ^A0N,16,16
-^FB200,1,0,C
+^FB240,1,0,C
 ^FD{EAN13}^FS
 
 ^FX ============================
 ^FX SKU
 ^FX ============================
-^FT20,210
+^FT20,200
 ^A0N,16,16
 ^FDSKU:{SKU}^FS
 
 ^FX ============================
-^FX FECHA (visible y bien alineada)
+^FX FECHA
 ^FX ============================
-^FT260,210
+^FT280,206
 ^A0N,16,16
-^FB300,1,0,L
+^FB220,1,0,L
 ^FDVALIDO HASTA: {FECHA}^FS
 
 ^XZ

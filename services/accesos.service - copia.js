@@ -137,23 +137,13 @@ async function obtenerMenu(pIdLogin) {
 }
 
 /* =====================================================
-   Helpers: detección de rol
+   Helper: detectar si el XML contiene tit="Cargar PAI"
    ===================================================== */
 
-function getUserRole(menuXml) {
-  if (!menuXml) return "Desconocido";
-
-  if (/tit\s*=\s*["']Admin["']/i.test(menuXml)) {
-    return "Admin";
-  }
-
-  if (/tit\s*=\s*["']Farmacia["']/i.test(menuXml)) {
-    return "Farmacia";
-  }
-
-  return "Desconocido";
+function checkCanUploadPAI(menuXml) {
+  if (!menuXml) return false;
+  return /tit\s*=\s*["']Cargar\s+PAI["']/i.test(menuXml);
 }
-
 
 /* =====================================================
    Paso 3: CambioPWD_Usuario (wsAccesos)
@@ -225,20 +215,14 @@ async function loginConAplicacion(username, password, codAplicacion, newPassword
     const retryResult = await loginUsuario(username, newPassword);
     const newIdLogin = retryResult.idLogin;
     const menuXml = await obtenerMenu(newIdLogin);
-	
-	const rol = getUserRole(menuXml);
-	const canUploadPAI = rol === "Admin";
-	console.log("[ACCESOS] Rol detectado:", rol);
-	console.log("[ACCESOS] canUploadPAI =", canUploadPAI);
-	return {
-		ok: true,
-		mensaje: "Acceso concedido",
-		pIdLogin: idLogin,
-		codAplicacion: COD_APLICACION,
-		menuXml,
-		rol,
-		canUploadPAI
-	};
+    return {
+      ok: true,
+      mensaje: "Acceso concedido",
+      pIdLogin: newIdLogin,
+      codAplicacion: COD_APLICACION,
+      menuXml,
+      canUploadPAI: checkCanUploadPAI(menuXml)
+    };
   }
 
   // 3️⃣ Si requiere cambio y NO hay nueva clave → informar al frontend
@@ -255,21 +239,16 @@ async function loginConAplicacion(username, password, codAplicacion, newPassword
 
 // 4️⃣ Flujo normal
   const menuXml = await obtenerMenu(idLogin);
-  
-  const rol = getUserRole(menuXml);
-  const canUploadPAI = rol === "Admin";
-  console.log("[ACCESOS] Rol detectado:", rol);
+  const canUploadPAI = checkCanUploadPAI(menuXml);
   console.log("[ACCESOS] canUploadPAI =", canUploadPAI);
   return {
-	ok: true,
-	mensaje: "Acceso concedido",
-	pIdLogin: idLogin,
-	codAplicacion: COD_APLICACION,
-	menuXml,
-	rol,
-	canUploadPAI
-	};
-
+    ok: true,
+    mensaje: "Acceso concedido",
+    pIdLogin: idLogin,
+    codAplicacion: COD_APLICACION,
+    menuXml,
+    canUploadPAI
+  };
 }
 
 module.exports = {
