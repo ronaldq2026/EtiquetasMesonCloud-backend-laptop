@@ -15,6 +15,24 @@ async function getConnection() {
   });
 }
 
+// 🔥 LIMPIAR DÍA ACTUAL
+async function limpiarDiaActual() {
+  const conn = await getConnection();
+  try {
+    await conn.execute(
+      `BEGIN INTERPRETECORP_OWN.PKG_PAI_SKU.limpiar_dia_actual; END;`
+    );
+    await conn.commit();
+    console.log("🗑️ Registros del día actual eliminados");
+  } catch (err) {
+    console.error("❌ Error limpiando día actual:", err);
+    await conn.rollback();
+    throw err;
+  } finally {
+    await conn.close();
+  }
+}
+
 // 🔥 INSERT BATCH
 async function insertarSkuBatch(skus = []) {
   const conn = await getConnection();
@@ -98,5 +116,6 @@ async function getSkusCentralizados() {
 module.exports = {
   getCentralizado,
   insertarSkuBatch,
-  getSkusCentralizados
+  getSkusCentralizados,
+  limpiarDiaActual
 };
