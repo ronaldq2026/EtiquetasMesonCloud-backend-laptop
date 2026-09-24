@@ -293,7 +293,7 @@ async function getProductosPorSku(listaSku = []) {
 }
 
 // =============================
-// Recarga automática
+// Recarga automÃ¡tica
 // =============================
 
 setInterval(() => {

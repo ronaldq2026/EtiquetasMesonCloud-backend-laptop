@@ -1,3 +1,5 @@
+process.env.PATH = 'C:\\oracle\\instantclient_19_30;' + process.env.PATH;
+
 const oracledb = require('oracledb');
 
 // 🔥 SOLO en servidor (modo real)
@@ -39,9 +41,14 @@ async function insertarSkuBatch(skus = []) {
   let count = 0;
 
   try {
-    for (const sku of skus) {
+    // 🔥 dedupe: misma fecha + mismo SKU = un solo registro
+    const unicos = [...new Set(
+      (skus || [])
+        .map(s => s == null ? '' : String(s).trim())
+        .filter(Boolean)
+    )];
 
-      if (!sku) continue; // 🛡️ evita nulls
+    for (const sku of unicos) {
 
       await conn.execute(
         `BEGIN INTERPRETECORP_OWN.PKG_PAI_SKU.insertar_sku(:sku); END;`,
