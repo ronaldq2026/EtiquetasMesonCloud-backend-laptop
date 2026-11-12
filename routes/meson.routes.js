@@ -21,11 +21,23 @@ const router = express.Router();
 function formatDate(dateStr) {
   if (!dateStr) return '';
 
-  const d = new Date(dateStr);
+  if (typeof dateStr === 'string') {
+    const s = dateStr.trim();
+    if (/^\d{2}\/\d{2}\/\d{4}$/.test(s)) {
+      return s;
+    }
+    const m = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if (m) {
+      return `${m[3]}/${m[2]}/${m[1]}`;
+    }
+  }
 
-  const day = String(d.getDate()).padStart(2, '0');
-  const month = String(d.getMonth() + 1).padStart(2, '0');
-  const year = d.getFullYear();
+  const d = new Date(dateStr);
+  if (isNaN(d.getTime())) return '';
+
+  const day = String(d.getUTCDate()).padStart(2, '0');
+  const month = String(d.getUTCMonth() + 1).padStart(2, '0');
+  const year = d.getUTCFullYear();
 
   return `${day}/${month}/${year}`;
 }

@@ -7,6 +7,13 @@ const {
   buildEtiqueta,
   printEtiquetas
 } = require('../services/zebra.service');
+const {
+  createPrintJob,
+  uploadBatchPayload,
+  getPrintJob,
+  processBatch,
+  retryUncertainBatch
+} = require('../services/print-job.service');
 
 // -------------------------------
 // Utils
@@ -32,11 +39,74 @@ router.post('/api/labels/print', async (req, res) => {
   });
 
   try {
-    await printEtiquetas(req.body); // ✅ dispatcher único
-    res.json({ ok: true });
+    const result = await printEtiquetas(req.body); // ✅ dispatcher único
+    res.json(result);
   } catch (err) {
     console.error('[labels/print] error:', err);
     res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
+// -------------------------------
+// Impresión masiva persistente
+// -------------------------------
+router.post('/api/labels/print/jobs', async (req, res) => {
+  try {
+    const { products, totalProducts, totalBatches, origin } = req.body || {};
+    const job = await createPrintJob({ products, totalProducts, totalBatches, origin });
+    res.status(201).json(job);
+  } catch (err) {
+    console.error('[labels/print/jobs] create error:', err);
+    res.status(err.statusCode || 500).json({ ok: false, error: err.message });
+  }
+});
+
+router.post('/api/labels/print/jobs/:printId/batches/:batchNumber/payload', async (req, res) => {
+  try {
+    const job = await uploadBatchPayload(
+      req.params.printId,
+      req.params.batchNumber,
+      req.body?.products
+    );
+    res.json(job);
+  } catch (err) {
+    console.error('[labels/print/jobs] payload error:', err);
+    res.status(err.statusCode || 500).json({ ok: false, code: err.code, error: err.message });
+  }
+});
+
+router.get('/api/labels/print/jobs/:printId', async (req, res) => {
+  try {
+    const job = await getPrintJob(req.params.printId);
+    if (!job) return res.status(404).json({ ok: false, error: 'Trabajo no encontrado' });
+    res.json(job);
+  } catch (err) {
+    console.error('[labels/print/jobs] get error:', err);
+    res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
+router.post('/api/labels/print/jobs/:printId/batches/:batchNumber', async (req, res) => {
+  try {
+    const job = await processBatch(req.params.printId, req.params.batchNumber);
+    res.json(job);
+  } catch (err) {
+    console.error('[labels/print/jobs] batch error:', err);
+    res.status(err.statusCode || 500).json({ ok: false, code: err.code, error: err.message });
+  }
+});
+
+router.post('/api/labels/print/jobs/:printId/batches/:batchNumber/retry', async (req, res) => {
+  try {
+    const job = await retryUncertainBatch(
+      req.params.printId,
+      req.params.batchNumber,
+      req.body?.confirmRisk === true
+    );
+    res.json(job);
+  } catch (err) {
+    console.error('[labels/print/jobs] retry error:', err);
+    res.status(err.statusCode || 500).json({ ok: false, code: err.code, error: err.message });
   }
 });
 
